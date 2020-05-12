@@ -1,0 +1,393 @@
+{
+  "uid" : "ddaa363f379df037",
+  "name" : "test_forMediaLink",
+  "fullName" : "test_regression_suite.FooterTests#test_forMediaLink",
+  "historyId" : "3e0487e61a0db898bf2e62b770de25ce",
+  "time" : {
+    "start" : 1589258565993,
+    "stop" : 1589258567017,
+    "duration" : 1024
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError",
+  "statusTrace" : "self = <tests.home.footer_test.FooterTests testMethod=test_forMediaLink>\n\n    def test_forMediaLink(self):\n        result = self.fp.getForMediaLinkStatus()\n>       self.ts.markFinal(\"test_forMediaLink\", result, \"Footer_Verified For Media Link\")\n\nhome\\footer_test.py:60: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <utilities.casestatus.CaseStatus object at 0x04979DD0>\ntestName = 'test_forMediaLink', result = False\nresultMessage = 'Footer_Verified For Media Link'\n\n    def markFinal(self, testName, result, resultMessage):\n        \"\"\"\n        Mark the final result of verification point in a test case\n        This needs to be called at least once in a test case\n        This should be final test status of the test case\n        \"\"\"\n        self.setResult(result, resultMessage)\n    \n        if \"FAIL\" in self.resultList:\n            self.log.error(testName + \" Test Failed\")\n            self.resultList.clear()\n>           assert True == False\nE           AssertionError\n\n..\\utilities\\casestatus.py:74: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "browser",
+    "time" : {
+      "start" : 1589258544892,
+      "stop" : 1589258544892,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "classSetUp",
+    "time" : {
+      "start" : 1589258565992,
+      "stop" : 1589258565992,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "oneTimeSetUp",
+    "time" : {
+      "start" : 1589258544892,
+      "stop" : 1589258558508,
+      "duration" : 13616
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_UnitTestCase__pytest_class_setup",
+    "time" : {
+      "start" : 1589258544892,
+      "stop" : 1589258544892,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError",
+    "statusTrace" : "self = <tests.home.footer_test.FooterTests testMethod=test_forMediaLink>\n\n    def test_forMediaLink(self):\n        result = self.fp.getForMediaLinkStatus()\n>       self.ts.markFinal(\"test_forMediaLink\", result, \"Footer_Verified For Media Link\")\n\nhome\\footer_test.py:60: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <utilities.casestatus.CaseStatus object at 0x04979DD0>\ntestName = 'test_forMediaLink', result = False\nresultMessage = 'Footer_Verified For Media Link'\n\n    def markFinal(self, testName, result, resultMessage):\n        \"\"\"\n        Mark the final result of verification point in a test case\n        This needs to be called at least once in a test case\n        This should be final test status of the test case\n        \"\"\"\n        self.setResult(result, resultMessage)\n    \n        if \"FAIL\" in self.resultList:\n            self.log.error(testName + \" Test Failed\")\n            self.resultList.clear()\n>           assert True == False\nE           AssertionError\n\n..\\utilities\\casestatus.py:74: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "86ca248f7dfad678",
+      "name" : "Footer_Verified For Media Link.1589258567014",
+      "source" : "86ca248f7dfad678.png",
+      "type" : "image/png",
+      "size" : 41938
+    }, {
+      "uid" : "a81f18dfd3d83a95",
+      "name" : "log",
+      "source" : "a81f18dfd3d83a95.txt",
+      "type" : "text/plain",
+      "size" : 1426
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ {
+    "name" : "oneTimeSetUp::0",
+    "time" : {
+      "start" : 1589258585430,
+      "stop" : 1589258587809,
+      "duration" : 2379
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_UnitTestCase__pytest_class_setup::0",
+    "time" : {
+      "start" : 1589258587822,
+      "stop" : 1589258587822,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_regression_suite"
+  }, {
+    "name" : "subSuite",
+    "value" : "FooterTests"
+  }, {
+    "name" : "host",
+    "value" : "EXIPC0154"
+  }, {
+    "name" : "thread",
+    "value" : "14768-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_regression_suite"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "50d1890a18c58707",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589255119512,
+        "stop" : 1589255120536,
+        "duration" : 1024
+      }
+    }, {
+      "uid" : "bc8a0a1d0e61f107",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589253204203,
+        "stop" : 1589253205094,
+        "duration" : 891
+      }
+    }, {
+      "uid" : "ed984f9ea6e12808",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589216118805,
+        "stop" : 1589216119577,
+        "duration" : 772
+      }
+    }, {
+      "uid" : "cea6858ff6bd3d99",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589207724428,
+        "stop" : 1589207725405,
+        "duration" : 977
+      }
+    }, {
+      "uid" : "1df729c0d764890c",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589206273417,
+        "stop" : 1589206274446,
+        "duration" : 1029
+      }
+    }, {
+      "uid" : "1f2192da704f4238",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589205348950,
+        "stop" : 1589205350471,
+        "duration" : 1521
+      }
+    }, {
+      "uid" : "70b4337665586d3a",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589203298551,
+        "stop" : 1589203299907,
+        "duration" : 1356
+      }
+    }, {
+      "uid" : "1720f032952c2632",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589163790881,
+        "stop" : 1589163791847,
+        "duration" : 966
+      }
+    }, {
+      "uid" : "1a86d31d0a87cdd5",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589113058853,
+        "stop" : 1589113060288,
+        "duration" : 1435
+      }
+    }, {
+      "uid" : "73c491ce2c591c95",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1588853661332,
+        "stop" : 1588853662237,
+        "duration" : 905
+      }
+    }, {
+      "uid" : "29a89ea468c19448",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1588852336341,
+        "stop" : 1588852337438,
+        "duration" : 1097
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 12,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 12
+      },
+      "items" : [ {
+        "uid" : "baeff548be4b81a3",
+        "reportUrl" : "http://localhost:8080/job/MattamyAutomationFramework/27/allure/#testresult/baeff548be4b81a3",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1589255119512,
+          "stop" : 1589255120536,
+          "duration" : 1024
+        }
+      }, {
+        "uid" : "335e4ab9a4b0e02f",
+        "reportUrl" : "http://localhost:8080/job/MattamyAutomationFramework/26/allure/#testresult/335e4ab9a4b0e02f",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1589253204203,
+          "stop" : 1589253205094,
+          "duration" : 891
+        }
+      }, {
+        "uid" : "4eae4aab0bbd9451",
+        "reportUrl" : "http://localhost:8080/job/MattamyHomes/25/allure/#testresult/4eae4aab0bbd9451",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1589216118805,
+          "stop" : 1589216119577,
+          "duration" : 772
+        }
+      }, {
+        "uid" : "3a601a3b96ff43ca",
+        "reportUrl" : "http://localhost:8080/job/MattamyHomes/24/allure/#testresult/3a601a3b96ff43ca",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1589207724428,
+          "stop" : 1589207725405,
+          "duration" : 977
+        }
+      }, {
+        "uid" : "e92bed9fbec211d5",
+        "reportUrl" : "http://localhost:8080/job/MattamyHomes/23/allure/#testresult/e92bed9fbec211d5",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1589206273417,
+          "stop" : 1589206274446,
+          "duration" : 1029
+        }
+      }, {
+        "uid" : "c487af1060e8b478",
+        "reportUrl" : "http://localhost:8080/job/MattamyHomes/22/allure/#testresult/c487af1060e8b478",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1589205348950,
+          "stop" : 1589205350471,
+          "duration" : 1521
+        }
+      }, {
+        "uid" : "9df03f0236acb441",
+        "reportUrl" : "http://localhost:8080/job/MattamyHomes/21/allure/#testresult/9df03f0236acb441",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1589203298551,
+          "stop" : 1589203299907,
+          "duration" : 1356
+        }
+      }, {
+        "uid" : "a834f2a32cc1bb03",
+        "reportUrl" : "http://localhost:8080/job/MattamyHomes/20/allure/#testresult/a834f2a32cc1bb03",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1589163790881,
+          "stop" : 1589163791847,
+          "duration" : 966
+        }
+      }, {
+        "uid" : "fb081c25c321e77f",
+        "reportUrl" : "http://localhost:8080/job/MattamyHomes/19/allure/#testresult/fb081c25c321e77f",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1589113058853,
+          "stop" : 1589113060288,
+          "duration" : 1435
+        }
+      }, {
+        "uid" : "6de90ee5987f4f56",
+        "reportUrl" : "http://localhost:8080/job/MattamyHomes/18/allure/#testresult/6de90ee5987f4f56",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1588853661332,
+          "stop" : 1588853662237,
+          "duration" : 905
+        }
+      }, {
+        "uid" : "3278a27a62ea617e",
+        "reportUrl" : "http://localhost:8080/job/MattamyHomes/17/allure/#testresult/3278a27a62ea617e",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1588852336341,
+          "stop" : 1588852337438,
+          "duration" : 1097
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "ddaa363f379df037.json",
+  "parameterValues" : [ ]
+}
