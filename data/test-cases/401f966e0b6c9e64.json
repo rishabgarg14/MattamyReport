@@ -1,0 +1,600 @@
+{
+  "uid" : "401f966e0b6c9e64",
+  "name" : "test_countryToggleClick",
+  "fullName" : "test_regression_suite.HeaderTests#test_countryToggleClick",
+  "historyId" : "6c053e0624337537ed7927f4232d7df8",
+  "time" : {
+    "start" : 1590654886993,
+    "stop" : 1590654887004,
+    "duration" : 11
+  },
+  "status" : "broken",
+  "statusMessage" : "TypeError: argument of type 'NoneType' is not iterable",
+  "statusTrace" : "self = <tests.home.header_test.HeaderTests testMethod=test_countryToggleClick>\n\n    def test_countryToggleClick(self):\n>       result = self.hp.verifyToggleClick()\n\nhome\\header_test.py:48: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <pages.home.header_page.HeaderPage object at 0x00000251D0370E20>\n\n    def verifyToggleClick(self):\n        oldAttribute = self.getAttribute(self._usa_text, \"xpath\", \"class\")\n        newValue = \"\"\n        self.clickCountrySelector()\n        newAttribute = self.getAttribute(self._usa_text, \"xpath\", \"class\")\n    \n>       if \"text-action-blue\" in oldAttribute:\nE       TypeError: argument of type 'NoneType' is not iterable\n\n..\\pages\\home\\header_page.py:79: TypeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "oneTimeSetUp",
+    "time" : {
+      "start" : 1590654872333,
+      "stop" : 1590654886121,
+      "duration" : 13788
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_UnitTestCase__pytest_class_setup",
+    "time" : {
+      "start" : 1590654872332,
+      "stop" : 1590654872332,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "browser",
+    "time" : {
+      "start" : 1590654872333,
+      "stop" : 1590654872333,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "classSetUp",
+    "time" : {
+      "start" : 1590654886992,
+      "stop" : 1590654886992,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "TypeError: argument of type 'NoneType' is not iterable",
+    "statusTrace" : "self = <tests.home.header_test.HeaderTests testMethod=test_countryToggleClick>\n\n    def test_countryToggleClick(self):\n>       result = self.hp.verifyToggleClick()\n\nhome\\header_test.py:48: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <pages.home.header_page.HeaderPage object at 0x00000251D0370E20>\n\n    def verifyToggleClick(self):\n        oldAttribute = self.getAttribute(self._usa_text, \"xpath\", \"class\")\n        newValue = \"\"\n        self.clickCountrySelector()\n        newAttribute = self.getAttribute(self._usa_text, \"xpath\", \"class\")\n    \n>       if \"text-action-blue\" in oldAttribute:\nE       TypeError: argument of type 'NoneType' is not iterable\n\n..\\pages\\home\\header_page.py:79: TypeError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "b66bb1ac903387ae",
+      "name" : "log",
+      "source" : "b66bb1ac903387ae.txt",
+      "type" : "text/plain",
+      "size" : 1332
+    }, {
+      "uid" : "ec43373d67d595df",
+      "name" : "stdout",
+      "source" : "ec43373d67d595df.txt",
+      "type" : "text/plain",
+      "size" : 399
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ {
+    "name" : "oneTimeSetUp::0",
+    "time" : {
+      "start" : 1590654887377,
+      "stop" : 1590654889473,
+      "duration" : 2096
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_UnitTestCase__pytest_class_setup::0",
+    "time" : {
+      "start" : 1590654889478,
+      "stop" : 1590654889478,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_regression_suite"
+  }, {
+    "name" : "subSuite",
+    "value" : "HeaderTests"
+  }, {
+    "name" : "host",
+    "value" : "EXIPC0154"
+  }, {
+    "name" : "thread",
+    "value" : "2720-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_regression_suite"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "d96954092ac1d16b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590568908164,
+        "stop" : 1590568908784,
+        "duration" : 620
+      }
+    }, {
+      "uid" : "21544155ed5d88b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590405823717,
+        "stop" : 1590405824133,
+        "duration" : 416
+      }
+    }, {
+      "uid" : "6051af1dfe483284",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590404542072,
+        "stop" : 1590404544521,
+        "duration" : 2449
+      }
+    }, {
+      "uid" : "3522ebd929e5957f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590404541504,
+        "stop" : 1590404544145,
+        "duration" : 2641
+      }
+    }, {
+      "uid" : "120ee1bbc53a8207",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589610705970,
+        "stop" : 1589610706600,
+        "duration" : 630
+      }
+    }, {
+      "uid" : "53ffff3ba994835",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589609717482,
+        "stop" : 1589609718061,
+        "duration" : 579
+      }
+    }, {
+      "uid" : "5641dc6f2ced0d47",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589609463372,
+        "stop" : 1589609463982,
+        "duration" : 610
+      }
+    }, {
+      "uid" : "3e2da06cae06602d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589609007147,
+        "stop" : 1589609008099,
+        "duration" : 952
+      }
+    }, {
+      "uid" : "7540fe2391e52c86",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home",
+      "time" : {
+        "start" : 1589607872680,
+        "stop" : 1589607872680,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "51c0bdbe31476297",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589606536337,
+        "stop" : 1589606536944,
+        "duration" : 607
+      }
+    }, {
+      "uid" : "18ed9076731cbfc4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589597937766,
+        "stop" : 1589597938542,
+        "duration" : 776
+      }
+    }, {
+      "uid" : "d6dc9c88e2e1fb09",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589596725721,
+        "stop" : 1589596726384,
+        "duration" : 663
+      }
+    }, {
+      "uid" : "424ba0e363cfec59",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589534598027,
+        "stop" : 1589534598646,
+        "duration" : 619
+      }
+    }, {
+      "uid" : "ba4819508c0fec00",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589469220992,
+        "stop" : 1589469221595,
+        "duration" : 603
+      }
+    }, {
+      "uid" : "759a8be868b6c693",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589386821838,
+        "stop" : 1589386822254,
+        "duration" : 416
+      }
+    }, {
+      "uid" : "1dbc5eeb16bee63a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589272269864,
+        "stop" : 1589272270255,
+        "duration" : 391
+      }
+    }, {
+      "uid" : "47e5f78d1c239372",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1589258759659,
+        "stop" : 1589258791340,
+        "duration" : 31681
+      }
+    }, {
+      "uid" : "5a1fd86bce9c616f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589258602115,
+        "stop" : 1589258602534,
+        "duration" : 419
+      }
+    }, {
+      "uid" : "1c6518fe0f60b4ca",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589255149513,
+        "stop" : 1589255149845,
+        "duration" : 332
+      }
+    }, {
+      "uid" : "3791696e5f91996b",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1589253278998,
+        "stop" : 1589253310594,
+        "duration" : 31596
+      }
+    }, {
+      "uid" : "b578c0efa4572a80",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589216213743,
+        "stop" : 1589216214228,
+        "duration" : 485
+      }
+    }, {
+      "uid" : "1b4cfaf393d18b43",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589207829079,
+        "stop" : 1589207829463,
+        "duration" : 384
+      }
+    }, {
+      "uid" : "966c667d670f6a4b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589206367858,
+        "stop" : 1589206368221,
+        "duration" : 363
+      }
+    }, {
+      "uid" : "de0e9473b25c06f5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589205418139,
+        "stop" : 1589205418480,
+        "duration" : 341
+      }
+    }, {
+      "uid" : "d9fac93dcbbce110",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589203405358,
+        "stop" : 1589203405670,
+        "duration" : 312
+      }
+    }, {
+      "uid" : "75c436bea3837e87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589163924297,
+        "stop" : 1589163924679,
+        "duration" : 382
+      }
+    }, {
+      "uid" : "648937ab00c7df7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589113113433,
+        "stop" : 1589113113816,
+        "duration" : 383
+      }
+    }, {
+      "uid" : "6c673d9cc988ee01",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588853744681,
+        "stop" : 1588853745030,
+        "duration" : 349
+      }
+    }, {
+      "uid" : "25b19870027de809",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588852432917,
+        "stop" : 1588852433346,
+        "duration" : 429
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 2,
+        "skipped" : 0,
+        "passed" : 28,
+        "unknown" : 0,
+        "total" : 30
+      },
+      "items" : [ {
+        "uid" : "1ae57e6c4b4e5582",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/48/allure/#testresult/1ae57e6c4b4e5582",
+        "status" : "passed",
+        "time" : {
+          "start" : 1590568908164,
+          "stop" : 1590568908784,
+          "duration" : 620
+        }
+      }, {
+        "uid" : "a326af5b5e9e2435",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/47/allure/#testresult/a326af5b5e9e2435",
+        "status" : "passed",
+        "time" : {
+          "start" : 1590405823717,
+          "stop" : 1590405824133,
+          "duration" : 416
+        }
+      }, {
+        "uid" : "f1f4c99cc449059a",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/46/allure/#testresult/f1f4c99cc449059a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1590405823717,
+          "stop" : 1590405824133,
+          "duration" : 416
+        }
+      }, {
+        "uid" : "5c52da24273ccd49",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/45/allure/#testresult/5c52da24273ccd49",
+        "status" : "passed",
+        "time" : {
+          "start" : 1590404542072,
+          "stop" : 1590404544521,
+          "duration" : 2449
+        }
+      }, {
+        "uid" : "361bf17fa683a149",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/43/allure/#testresult/361bf17fa683a149",
+        "status" : "passed",
+        "time" : {
+          "start" : 1589610705970,
+          "stop" : 1589610706600,
+          "duration" : 630
+        }
+      }, {
+        "uid" : "cf7eaff30a9dd24e",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/42/allure/#testresult/cf7eaff30a9dd24e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1589610705970,
+          "stop" : 1589610706600,
+          "duration" : 630
+        }
+      }, {
+        "uid" : "86ab396464afff28",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/41/allure/#testresult/86ab396464afff28",
+        "status" : "passed",
+        "time" : {
+          "start" : 1589609717482,
+          "stop" : 1589609718061,
+          "duration" : 579
+        }
+      }, {
+        "uid" : "e2371586f545a16d",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/40/allure/#testresult/e2371586f545a16d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1589609463372,
+          "stop" : 1589609463982,
+          "duration" : 610
+        }
+      }, {
+        "uid" : "e37c334e67d2516e",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/39/allure/#testresult/e37c334e67d2516e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1589609007147,
+          "stop" : 1589609008099,
+          "duration" : 952
+        }
+      }, {
+        "uid" : "6d3e11a1d674ee1f",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/37/allure/#testresult/6d3e11a1d674ee1f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1589606536337,
+          "stop" : 1589606536944,
+          "duration" : 607
+        }
+      }, {
+        "uid" : "34acac2dddf19949",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/36/allure/#testresult/34acac2dddf19949",
+        "status" : "passed",
+        "time" : {
+          "start" : 1589597937766,
+          "stop" : 1589597938542,
+          "duration" : 776
+        }
+      }, {
+        "uid" : "3091fafec7fdd6aa",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/35/allure/#testresult/3091fafec7fdd6aa",
+        "status" : "passed",
+        "time" : {
+          "start" : 1589596725721,
+          "stop" : 1589596726384,
+          "duration" : 663
+        }
+      }, {
+        "uid" : "696824a1eee25e8e",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/34/allure/#testresult/696824a1eee25e8e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1589534598027,
+          "stop" : 1589534598646,
+          "duration" : 619
+        }
+      }, {
+        "uid" : "6ef1335ce51e8467",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/33/allure/#testresult/6ef1335ce51e8467",
+        "status" : "passed",
+        "time" : {
+          "start" : 1589534598027,
+          "stop" : 1589534598646,
+          "duration" : 619
+        }
+      }, {
+        "uid" : "515e99815b35c5e7",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/32/allure/#testresult/515e99815b35c5e7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1589469220992,
+          "stop" : 1589469221595,
+          "duration" : 603
+        }
+      }, {
+        "uid" : "95a5b566a86d649a",
+        "reportUrl" : "http://localhost:8080/job/MattamyAutomationFramework/31/allure/#testresult/95a5b566a86d649a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1589386821838,
+          "stop" : 1589386822254,
+          "duration" : 416
+        }
+      }, {
+        "uid" : "41a532e2375581b4",
+        "reportUrl" : "http://localhost:8080/job/MattamyAutomationFramework/30/allure/#testresult/41a532e2375581b4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1589272269864,
+          "stop" : 1589272270255,
+          "duration" : 391
+        }
+      }, {
+        "uid" : "606f570d1b5d9146",
+        "reportUrl" : "http://localhost:8080/job/MattamyAutomationFramework/28/allure/#testresult/606f570d1b5d9146",
+        "status" : "passed",
+        "time" : {
+          "start" : 1589258602115,
+          "stop" : 1589258602534,
+          "duration" : 419
+        }
+      }, {
+        "uid" : "227753350e160816",
+        "reportUrl" : "http://localhost:8080/job/MattamyAutomationFramework/27/allure/#testresult/227753350e160816",
+        "status" : "passed",
+        "time" : {
+          "start" : 1589255149513,
+          "stop" : 1589255149845,
+          "duration" : 332
+        }
+      }, {
+        "uid" : "b61d9fe8910f4f7e",
+        "reportUrl" : "http://localhost:8080/job/MattamyAutomationFramework/26/allure/#testresult/b61d9fe8910f4f7e",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1589253278998,
+          "stop" : 1589253310594,
+          "duration" : 31596
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "401f966e0b6c9e64.json",
+  "parameterValues" : [ ]
+}
