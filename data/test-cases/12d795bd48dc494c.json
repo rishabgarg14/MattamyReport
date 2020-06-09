@@ -1,0 +1,667 @@
+{
+  "uid" : "12d795bd48dc494c",
+  "name" : "test_FindYourDreamHomeExist",
+  "fullName" : "test_regression_suite.HeaderTests#test_FindYourDreamHomeExist",
+  "historyId" : "e2773d1b3948c7572a421524fb3e4f67",
+  "time" : {
+    "start" : 1591691762977,
+    "stop" : 1591691762990,
+    "duration" : 13
+  },
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=83.0.4103.61)",
+  "statusTrace" : "self = <utilities.casestatus.CaseStatus object at 0x00000214DC091D60>\nresult = False, resultMessage = \"Verify 'Find Your Dream Home' executed\"\n\n    def setResult(self, result, resultMessage):\n        try:\n            if result is not None:\n                if result:\n                    self.resultList.append(\"PASS\")\n                    self.log.info(\" ### Verification Pass :: \" + resultMessage)\n                else:\n                    self.resultList.append(\"FAIL\")\n                    self.log.info(\" ### Verification FAIL :: \" + resultMessage)\n                    self.screenShot(resultMessage)\n>                   allure.attach(self.driver.get_screenshot_as_png(),\n                                  name=resultMessage + \".\" + str(round(time.time() * 1000)),\n                                  attachment_type=AttachmentType.PNG)\n\n..\\utilities\\casestatus.py:39: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"51de0386f960c7abd9ff10eac13f6046\")>\n\n    def get_screenshot_as_png(self):\n        \"\"\"\n        Gets the screenshot of the current window as a binary data.\n    \n        :Usage:\n            driver.get_screenshot_as_png()\n        \"\"\"\n>       return base64.b64decode(self.get_screenshot_as_base64().encode('ascii'))\n\n..\\..\\..\\pycharmprojects\\mattamyhomes\\venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:1064: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"51de0386f960c7abd9ff10eac13f6046\")>\n\n    def get_screenshot_as_base64(self):\n        \"\"\"\n        Gets the screenshot of the current window as a base64 encoded string\n           which is useful in embedded images in HTML.\n    \n        :Usage:\n            driver.get_screenshot_as_base64()\n        \"\"\"\n>       return self.execute(Command.SCREENSHOT)['value']\n\n..\\..\\..\\pycharmprojects\\mattamyhomes\\venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:1074: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"51de0386f960c7abd9ff10eac13f6046\")>\ndriver_command = 'screenshot', params = {}\n\n    def execute(self, driver_command, params=None):\n        \"\"\"\n        Sends a command to be executed by a command.CommandExecutor.\n    \n        :Args:\n         - driver_command: The name of the command to execute as a string.\n         - params: A dictionary of named parameters to send with the command.\n    \n        :Returns:\n          The command's JSON response loaded into a dictionary object.\n        \"\"\"\n        if self.session_id is not None:\n            if not params:\n                params = {'sessionId': self.session_id}\n            elif 'sessionId' not in params:\n                params['sessionId'] = self.session_id\n    \n        params = self._wrap_value(params)\n        response = self.command_executor.execute(driver_command, params)\n        if response:\n>           self.error_handler.check_response(response)\n\n..\\..\\..\\pycharmprojects\\mattamyhomes\\venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:321: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x00000214DC061610>\nresponse = {'status': 404, 'value': '{\"value\":{\"error\":\"no such window\",\"message\":\"no such window: target window already closed\\\\...\\n\\\\tRtlGetAppContainerNamedObjectPath [0x77BC7B74+228]\\\\n\\\\tRtlGetAppContainerNamedObjectPath [0x77BC7B44+180]\\\\n\"}}'}\n\n    def check_response(self, response):\n        \"\"\"\n        Checks that a JSON response from the WebDriver does not have an error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get('status', None)\n        if status is None or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get('value', None)\n            if value_json and isinstance(value_json, basestring):\n                import json\n                try:\n                    value = json.loads(value_json)\n                    if len(value.keys()) == 1:\n                        value = value['value']\n                    status = value.get('error', None)\n                    if status is None:\n                        status = value[\"status\"]\n                        message = value[\"value\"]\n                        if not isinstance(message, basestring):\n                            value = message\n                            message = message.get('message')\n                    else:\n                        message = value.get('message', None)\n                except ValueError:\n                    pass\n    \n        exception_class = ErrorInResponseException\n        if status in ErrorCode.NO_SUCH_ELEMENT:\n            exception_class = NoSuchElementException\n        elif status in ErrorCode.NO_SUCH_FRAME:\n            exception_class = NoSuchFrameException\n        elif status in ErrorCode.NO_SUCH_WINDOW:\n            exception_class = NoSuchWindowException\n        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:\n            exception_class = StaleElementReferenceException\n        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:\n            exception_class = ElementNotVisibleException\n        elif status in ErrorCode.INVALID_ELEMENT_STATE:\n            exception_class = InvalidElementStateException\n        elif status in ErrorCode.INVALID_SELECTOR \\\n                or status in ErrorCode.INVALID_XPATH_SELECTOR \\\n                or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER:\n            exception_class = InvalidSelectorException\n        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:\n            exception_class = ElementNotSelectableException\n        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:\n            exception_class = ElementNotInteractableException\n        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:\n            exception_class = InvalidCookieDomainException\n        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:\n            exception_class = UnableToSetCookieException\n        elif status in ErrorCode.TIMEOUT:\n            exception_class = TimeoutException\n        elif status in ErrorCode.SCRIPT_TIMEOUT:\n            exception_class = TimeoutException\n        elif status in ErrorCode.UNKNOWN_ERROR:\n            exception_class = WebDriverException\n        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:\n            exception_class = UnexpectedAlertPresentException\n        elif status in ErrorCode.NO_ALERT_OPEN:\n            exception_class = NoAlertPresentException\n        elif status in ErrorCode.IME_NOT_AVAILABLE:\n            exception_class = ImeNotAvailableException\n        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:\n            exception_class = ImeActivationFailedException\n        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:\n            exception_class = MoveTargetOutOfBoundsException\n        elif status in ErrorCode.JAVASCRIPT_ERROR:\n            exception_class = JavascriptException\n        elif status in ErrorCode.SESSION_NOT_CREATED:\n            exception_class = SessionNotCreatedException\n        elif status in ErrorCode.INVALID_ARGUMENT:\n            exception_class = InvalidArgumentException\n        elif status in ErrorCode.NO_SUCH_COOKIE:\n            exception_class = NoSuchCookieException\n        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:\n            exception_class = ScreenshotException\n        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:\n            exception_class = ElementClickInterceptedException\n        elif status in ErrorCode.INSECURE_CERTIFICATE:\n            exception_class = InsecureCertificateException\n        elif status in ErrorCode.INVALID_COORDINATES:\n            exception_class = InvalidCoordinatesException\n        elif status in ErrorCode.INVALID_SESSION_ID:\n            exception_class = InvalidSessionIdException\n        elif status in ErrorCode.UNKNOWN_METHOD:\n            exception_class = UnknownMethodException\n        else:\n            exception_class = WebDriverException\n        if value == '' or value is None:\n            value = response['value']\n        if isinstance(value, basestring):\n            if exception_class == ErrorInResponseException:\n                raise exception_class(response, value)\n            raise exception_class(value)\n        if message == \"\" and 'message' in value:\n            message = value['message']\n    \n        screen = None\n        if 'screen' in value:\n            screen = value['screen']\n    \n        stacktrace = None\n        if 'stackTrace' in value and value['stackTrace']:\n            stacktrace = []\n            try:\n                for frame in value['stackTrace']:\n                    line = self._value_or_default(frame, 'lineNumber', '')\n                    file = self._value_or_default(frame, 'fileName', '<anonymous>')\n                    if line:\n                        file = \"%s:%s\" % (file, line)\n                    meth = self._value_or_default(frame, 'methodName', '<anonymous>')\n                    if 'className' in frame:\n                        meth = \"%s.%s\" % (frame['className'], meth)\n                    msg = \"    at %s (%s)\"\n                    msg = msg % (meth, file)\n                    stacktrace.append(msg)\n            except TypeError:\n                pass\n        if exception_class == ErrorInResponseException:\n            raise exception_class(response, message)\n        elif exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if 'data' in value:\n                alert_text = value['data'].get('text')\n            elif 'alert' in value:\n                alert_text = value['alert'].get('text')\n            raise exception_class(message, screen, stacktrace, alert_text)\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed\nE       from unknown error: web view not found\nE         (Session info: chrome=83.0.4103.61)\n\n..\\..\\..\\pycharmprojects\\mattamyhomes\\venv\\lib\\site-packages\\selenium\\webdriver\\remote\\errorhandler.py:242: NoSuchWindowException\n\nDuring handling of the above exception, another exception occurred:\n\nself = <tests.home.header_test.HeaderTests testMethod=test_FindYourDreamHomeExist>\n\n    def test_FindYourDreamHomeExist(self):\n        result = self.hp.verifyFYDHExist()\n>       self.ts.markFinal(\"test_FindYourDreamHomeExist\", result, \"Verify 'Find Your Dream Home' executed\")\n\nhome\\header_test.py:24: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n..\\utilities\\casestatus.py:69: in markFinal\n    self.setResult(result, resultMessage)\n..\\utilities\\casestatus.py:52: in setResult\n    allure.attach(self.driver.get_screenshot_as_png(),\n..\\..\\..\\pycharmprojects\\mattamyhomes\\venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:1064: in get_screenshot_as_png\n    return base64.b64decode(self.get_screenshot_as_base64().encode('ascii'))\n..\\..\\..\\pycharmprojects\\mattamyhomes\\venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:1074: in get_screenshot_as_base64\n    return self.execute(Command.SCREENSHOT)['value']\n..\\..\\..\\pycharmprojects\\mattamyhomes\\venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:321: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x00000214DC061610>\nresponse = {'status': 404, 'value': '{\"value\":{\"error\":\"no such window\",\"message\":\"no such window: target window already closed\\\\...\\n\\\\tRtlGetAppContainerNamedObjectPath [0x77BC7B74+228]\\\\n\\\\tRtlGetAppContainerNamedObjectPath [0x77BC7B44+180]\\\\n\"}}'}\n\n    def check_response(self, response):\n        \"\"\"\n        Checks that a JSON response from the WebDriver does not have an error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get('status', None)\n        if status is None or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get('value', None)\n            if value_json and isinstance(value_json, basestring):\n                import json\n                try:\n                    value = json.loads(value_json)\n                    if len(value.keys()) == 1:\n                        value = value['value']\n                    status = value.get('error', None)\n                    if status is None:\n                        status = value[\"status\"]\n                        message = value[\"value\"]\n                        if not isinstance(message, basestring):\n                            value = message\n                            message = message.get('message')\n                    else:\n                        message = value.get('message', None)\n                except ValueError:\n                    pass\n    \n        exception_class = ErrorInResponseException\n        if status in ErrorCode.NO_SUCH_ELEMENT:\n            exception_class = NoSuchElementException\n        elif status in ErrorCode.NO_SUCH_FRAME:\n            exception_class = NoSuchFrameException\n        elif status in ErrorCode.NO_SUCH_WINDOW:\n            exception_class = NoSuchWindowException\n        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:\n            exception_class = StaleElementReferenceException\n        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:\n            exception_class = ElementNotVisibleException\n        elif status in ErrorCode.INVALID_ELEMENT_STATE:\n            exception_class = InvalidElementStateException\n        elif status in ErrorCode.INVALID_SELECTOR \\\n                or status in ErrorCode.INVALID_XPATH_SELECTOR \\\n                or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER:\n            exception_class = InvalidSelectorException\n        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:\n            exception_class = ElementNotSelectableException\n        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:\n            exception_class = ElementNotInteractableException\n        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:\n            exception_class = InvalidCookieDomainException\n        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:\n            exception_class = UnableToSetCookieException\n        elif status in ErrorCode.TIMEOUT:\n            exception_class = TimeoutException\n        elif status in ErrorCode.SCRIPT_TIMEOUT:\n            exception_class = TimeoutException\n        elif status in ErrorCode.UNKNOWN_ERROR:\n            exception_class = WebDriverException\n        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:\n            exception_class = UnexpectedAlertPresentException\n        elif status in ErrorCode.NO_ALERT_OPEN:\n            exception_class = NoAlertPresentException\n        elif status in ErrorCode.IME_NOT_AVAILABLE:\n            exception_class = ImeNotAvailableException\n        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:\n            exception_class = ImeActivationFailedException\n        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:\n            exception_class = MoveTargetOutOfBoundsException\n        elif status in ErrorCode.JAVASCRIPT_ERROR:\n            exception_class = JavascriptException\n        elif status in ErrorCode.SESSION_NOT_CREATED:\n            exception_class = SessionNotCreatedException\n        elif status in ErrorCode.INVALID_ARGUMENT:\n            exception_class = InvalidArgumentException\n        elif status in ErrorCode.NO_SUCH_COOKIE:\n            exception_class = NoSuchCookieException\n        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:\n            exception_class = ScreenshotException\n        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:\n            exception_class = ElementClickInterceptedException\n        elif status in ErrorCode.INSECURE_CERTIFICATE:\n            exception_class = InsecureCertificateException\n        elif status in ErrorCode.INVALID_COORDINATES:\n            exception_class = InvalidCoordinatesException\n        elif status in ErrorCode.INVALID_SESSION_ID:\n            exception_class = InvalidSessionIdException\n        elif status in ErrorCode.UNKNOWN_METHOD:\n            exception_class = UnknownMethodException\n        else:\n            exception_class = WebDriverException\n        if value == '' or value is None:\n            value = response['value']\n        if isinstance(value, basestring):\n            if exception_class == ErrorInResponseException:\n                raise exception_class(response, value)\n            raise exception_class(value)\n        if message == \"\" and 'message' in value:\n            message = value['message']\n    \n        screen = None\n        if 'screen' in value:\n            screen = value['screen']\n    \n        stacktrace = None\n        if 'stackTrace' in value and value['stackTrace']:\n            stacktrace = []\n            try:\n                for frame in value['stackTrace']:\n                    line = self._value_or_default(frame, 'lineNumber', '')\n                    file = self._value_or_default(frame, 'fileName', '<anonymous>')\n                    if line:\n                        file = \"%s:%s\" % (file, line)\n                    meth = self._value_or_default(frame, 'methodName', '<anonymous>')\n                    if 'className' in frame:\n                        meth = \"%s.%s\" % (frame['className'], meth)\n                    msg = \"    at %s (%s)\"\n                    msg = msg % (meth, file)\n                    stacktrace.append(msg)\n            except TypeError:\n                pass\n        if exception_class == ErrorInResponseException:\n            raise exception_class(response, message)\n        elif exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if 'data' in value:\n                alert_text = value['data'].get('text')\n            elif 'alert' in value:\n                alert_text = value['alert'].get('text')\n            raise exception_class(message, screen, stacktrace, alert_text)\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed\nE       from unknown error: web view not found\nE         (Session info: chrome=83.0.4103.61)\n\n..\\..\\..\\pycharmprojects\\mattamyhomes\\venv\\lib\\site-packages\\selenium\\webdriver\\remote\\errorhandler.py:242: NoSuchWindowException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_UnitTestCase__pytest_class_setup",
+    "time" : {
+      "start" : 1591691738029,
+      "stop" : 1591691738029,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "oneTimeSetUp",
+    "time" : {
+      "start" : 1591691738030,
+      "stop" : 1591691762481,
+      "duration" : 24451
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "browser",
+    "time" : {
+      "start" : 1591691738030,
+      "stop" : 1591691738030,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "classSetUp",
+    "time" : {
+      "start" : 1591691762973,
+      "stop" : 1591691762973,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=83.0.4103.61)",
+    "statusTrace" : "self = <utilities.casestatus.CaseStatus object at 0x00000214DC091D60>\nresult = False, resultMessage = \"Verify 'Find Your Dream Home' executed\"\n\n    def setResult(self, result, resultMessage):\n        try:\n            if result is not None:\n                if result:\n                    self.resultList.append(\"PASS\")\n                    self.log.info(\" ### Verification Pass :: \" + resultMessage)\n                else:\n                    self.resultList.append(\"FAIL\")\n                    self.log.info(\" ### Verification FAIL :: \" + resultMessage)\n                    self.screenShot(resultMessage)\n>                   allure.attach(self.driver.get_screenshot_as_png(),\n                                  name=resultMessage + \".\" + str(round(time.time() * 1000)),\n                                  attachment_type=AttachmentType.PNG)\n\n..\\utilities\\casestatus.py:39: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"51de0386f960c7abd9ff10eac13f6046\")>\n\n    def get_screenshot_as_png(self):\n        \"\"\"\n        Gets the screenshot of the current window as a binary data.\n    \n        :Usage:\n            driver.get_screenshot_as_png()\n        \"\"\"\n>       return base64.b64decode(self.get_screenshot_as_base64().encode('ascii'))\n\n..\\..\\..\\pycharmprojects\\mattamyhomes\\venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:1064: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"51de0386f960c7abd9ff10eac13f6046\")>\n\n    def get_screenshot_as_base64(self):\n        \"\"\"\n        Gets the screenshot of the current window as a base64 encoded string\n           which is useful in embedded images in HTML.\n    \n        :Usage:\n            driver.get_screenshot_as_base64()\n        \"\"\"\n>       return self.execute(Command.SCREENSHOT)['value']\n\n..\\..\\..\\pycharmprojects\\mattamyhomes\\venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:1074: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"51de0386f960c7abd9ff10eac13f6046\")>\ndriver_command = 'screenshot', params = {}\n\n    def execute(self, driver_command, params=None):\n        \"\"\"\n        Sends a command to be executed by a command.CommandExecutor.\n    \n        :Args:\n         - driver_command: The name of the command to execute as a string.\n         - params: A dictionary of named parameters to send with the command.\n    \n        :Returns:\n          The command's JSON response loaded into a dictionary object.\n        \"\"\"\n        if self.session_id is not None:\n            if not params:\n                params = {'sessionId': self.session_id}\n            elif 'sessionId' not in params:\n                params['sessionId'] = self.session_id\n    \n        params = self._wrap_value(params)\n        response = self.command_executor.execute(driver_command, params)\n        if response:\n>           self.error_handler.check_response(response)\n\n..\\..\\..\\pycharmprojects\\mattamyhomes\\venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:321: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x00000214DC061610>\nresponse = {'status': 404, 'value': '{\"value\":{\"error\":\"no such window\",\"message\":\"no such window: target window already closed\\\\...\\n\\\\tRtlGetAppContainerNamedObjectPath [0x77BC7B74+228]\\\\n\\\\tRtlGetAppContainerNamedObjectPath [0x77BC7B44+180]\\\\n\"}}'}\n\n    def check_response(self, response):\n        \"\"\"\n        Checks that a JSON response from the WebDriver does not have an error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get('status', None)\n        if status is None or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get('value', None)\n            if value_json and isinstance(value_json, basestring):\n                import json\n                try:\n                    value = json.loads(value_json)\n                    if len(value.keys()) == 1:\n                        value = value['value']\n                    status = value.get('error', None)\n                    if status is None:\n                        status = value[\"status\"]\n                        message = value[\"value\"]\n                        if not isinstance(message, basestring):\n                            value = message\n                            message = message.get('message')\n                    else:\n                        message = value.get('message', None)\n                except ValueError:\n                    pass\n    \n        exception_class = ErrorInResponseException\n        if status in ErrorCode.NO_SUCH_ELEMENT:\n            exception_class = NoSuchElementException\n        elif status in ErrorCode.NO_SUCH_FRAME:\n            exception_class = NoSuchFrameException\n        elif status in ErrorCode.NO_SUCH_WINDOW:\n            exception_class = NoSuchWindowException\n        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:\n            exception_class = StaleElementReferenceException\n        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:\n            exception_class = ElementNotVisibleException\n        elif status in ErrorCode.INVALID_ELEMENT_STATE:\n            exception_class = InvalidElementStateException\n        elif status in ErrorCode.INVALID_SELECTOR \\\n                or status in ErrorCode.INVALID_XPATH_SELECTOR \\\n                or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER:\n            exception_class = InvalidSelectorException\n        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:\n            exception_class = ElementNotSelectableException\n        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:\n            exception_class = ElementNotInteractableException\n        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:\n            exception_class = InvalidCookieDomainException\n        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:\n            exception_class = UnableToSetCookieException\n        elif status in ErrorCode.TIMEOUT:\n            exception_class = TimeoutException\n        elif status in ErrorCode.SCRIPT_TIMEOUT:\n            exception_class = TimeoutException\n        elif status in ErrorCode.UNKNOWN_ERROR:\n            exception_class = WebDriverException\n        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:\n            exception_class = UnexpectedAlertPresentException\n        elif status in ErrorCode.NO_ALERT_OPEN:\n            exception_class = NoAlertPresentException\n        elif status in ErrorCode.IME_NOT_AVAILABLE:\n            exception_class = ImeNotAvailableException\n        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:\n            exception_class = ImeActivationFailedException\n        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:\n            exception_class = MoveTargetOutOfBoundsException\n        elif status in ErrorCode.JAVASCRIPT_ERROR:\n            exception_class = JavascriptException\n        elif status in ErrorCode.SESSION_NOT_CREATED:\n            exception_class = SessionNotCreatedException\n        elif status in ErrorCode.INVALID_ARGUMENT:\n            exception_class = InvalidArgumentException\n        elif status in ErrorCode.NO_SUCH_COOKIE:\n            exception_class = NoSuchCookieException\n        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:\n            exception_class = ScreenshotException\n        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:\n            exception_class = ElementClickInterceptedException\n        elif status in ErrorCode.INSECURE_CERTIFICATE:\n            exception_class = InsecureCertificateException\n        elif status in ErrorCode.INVALID_COORDINATES:\n            exception_class = InvalidCoordinatesException\n        elif status in ErrorCode.INVALID_SESSION_ID:\n            exception_class = InvalidSessionIdException\n        elif status in ErrorCode.UNKNOWN_METHOD:\n            exception_class = UnknownMethodException\n        else:\n            exception_class = WebDriverException\n        if value == '' or value is None:\n            value = response['value']\n        if isinstance(value, basestring):\n            if exception_class == ErrorInResponseException:\n                raise exception_class(response, value)\n            raise exception_class(value)\n        if message == \"\" and 'message' in value:\n            message = value['message']\n    \n        screen = None\n        if 'screen' in value:\n            screen = value['screen']\n    \n        stacktrace = None\n        if 'stackTrace' in value and value['stackTrace']:\n            stacktrace = []\n            try:\n                for frame in value['stackTrace']:\n                    line = self._value_or_default(frame, 'lineNumber', '')\n                    file = self._value_or_default(frame, 'fileName', '<anonymous>')\n                    if line:\n                        file = \"%s:%s\" % (file, line)\n                    meth = self._value_or_default(frame, 'methodName', '<anonymous>')\n                    if 'className' in frame:\n                        meth = \"%s.%s\" % (frame['className'], meth)\n                    msg = \"    at %s (%s)\"\n                    msg = msg % (meth, file)\n                    stacktrace.append(msg)\n            except TypeError:\n                pass\n        if exception_class == ErrorInResponseException:\n            raise exception_class(response, message)\n        elif exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if 'data' in value:\n                alert_text = value['data'].get('text')\n            elif 'alert' in value:\n                alert_text = value['alert'].get('text')\n            raise exception_class(message, screen, stacktrace, alert_text)\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed\nE       from unknown error: web view not found\nE         (Session info: chrome=83.0.4103.61)\n\n..\\..\\..\\pycharmprojects\\mattamyhomes\\venv\\lib\\site-packages\\selenium\\webdriver\\remote\\errorhandler.py:242: NoSuchWindowException\n\nDuring handling of the above exception, another exception occurred:\n\nself = <tests.home.header_test.HeaderTests testMethod=test_FindYourDreamHomeExist>\n\n    def test_FindYourDreamHomeExist(self):\n        result = self.hp.verifyFYDHExist()\n>       self.ts.markFinal(\"test_FindYourDreamHomeExist\", result, \"Verify 'Find Your Dream Home' executed\")\n\nhome\\header_test.py:24: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n..\\utilities\\casestatus.py:69: in markFinal\n    self.setResult(result, resultMessage)\n..\\utilities\\casestatus.py:52: in setResult\n    allure.attach(self.driver.get_screenshot_as_png(),\n..\\..\\..\\pycharmprojects\\mattamyhomes\\venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:1064: in get_screenshot_as_png\n    return base64.b64decode(self.get_screenshot_as_base64().encode('ascii'))\n..\\..\\..\\pycharmprojects\\mattamyhomes\\venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:1074: in get_screenshot_as_base64\n    return self.execute(Command.SCREENSHOT)['value']\n..\\..\\..\\pycharmprojects\\mattamyhomes\\venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:321: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x00000214DC061610>\nresponse = {'status': 404, 'value': '{\"value\":{\"error\":\"no such window\",\"message\":\"no such window: target window already closed\\\\...\\n\\\\tRtlGetAppContainerNamedObjectPath [0x77BC7B74+228]\\\\n\\\\tRtlGetAppContainerNamedObjectPath [0x77BC7B44+180]\\\\n\"}}'}\n\n    def check_response(self, response):\n        \"\"\"\n        Checks that a JSON response from the WebDriver does not have an error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get('status', None)\n        if status is None or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get('value', None)\n            if value_json and isinstance(value_json, basestring):\n                import json\n                try:\n                    value = json.loads(value_json)\n                    if len(value.keys()) == 1:\n                        value = value['value']\n                    status = value.get('error', None)\n                    if status is None:\n                        status = value[\"status\"]\n                        message = value[\"value\"]\n                        if not isinstance(message, basestring):\n                            value = message\n                            message = message.get('message')\n                    else:\n                        message = value.get('message', None)\n                except ValueError:\n                    pass\n    \n        exception_class = ErrorInResponseException\n        if status in ErrorCode.NO_SUCH_ELEMENT:\n            exception_class = NoSuchElementException\n        elif status in ErrorCode.NO_SUCH_FRAME:\n            exception_class = NoSuchFrameException\n        elif status in ErrorCode.NO_SUCH_WINDOW:\n            exception_class = NoSuchWindowException\n        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:\n            exception_class = StaleElementReferenceException\n        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:\n            exception_class = ElementNotVisibleException\n        elif status in ErrorCode.INVALID_ELEMENT_STATE:\n            exception_class = InvalidElementStateException\n        elif status in ErrorCode.INVALID_SELECTOR \\\n                or status in ErrorCode.INVALID_XPATH_SELECTOR \\\n                or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER:\n            exception_class = InvalidSelectorException\n        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:\n            exception_class = ElementNotSelectableException\n        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:\n            exception_class = ElementNotInteractableException\n        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:\n            exception_class = InvalidCookieDomainException\n        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:\n            exception_class = UnableToSetCookieException\n        elif status in ErrorCode.TIMEOUT:\n            exception_class = TimeoutException\n        elif status in ErrorCode.SCRIPT_TIMEOUT:\n            exception_class = TimeoutException\n        elif status in ErrorCode.UNKNOWN_ERROR:\n            exception_class = WebDriverException\n        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:\n            exception_class = UnexpectedAlertPresentException\n        elif status in ErrorCode.NO_ALERT_OPEN:\n            exception_class = NoAlertPresentException\n        elif status in ErrorCode.IME_NOT_AVAILABLE:\n            exception_class = ImeNotAvailableException\n        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:\n            exception_class = ImeActivationFailedException\n        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:\n            exception_class = MoveTargetOutOfBoundsException\n        elif status in ErrorCode.JAVASCRIPT_ERROR:\n            exception_class = JavascriptException\n        elif status in ErrorCode.SESSION_NOT_CREATED:\n            exception_class = SessionNotCreatedException\n        elif status in ErrorCode.INVALID_ARGUMENT:\n            exception_class = InvalidArgumentException\n        elif status in ErrorCode.NO_SUCH_COOKIE:\n            exception_class = NoSuchCookieException\n        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:\n            exception_class = ScreenshotException\n        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:\n            exception_class = ElementClickInterceptedException\n        elif status in ErrorCode.INSECURE_CERTIFICATE:\n            exception_class = InsecureCertificateException\n        elif status in ErrorCode.INVALID_COORDINATES:\n            exception_class = InvalidCoordinatesException\n        elif status in ErrorCode.INVALID_SESSION_ID:\n            exception_class = InvalidSessionIdException\n        elif status in ErrorCode.UNKNOWN_METHOD:\n            exception_class = UnknownMethodException\n        else:\n            exception_class = WebDriverException\n        if value == '' or value is None:\n            value = response['value']\n        if isinstance(value, basestring):\n            if exception_class == ErrorInResponseException:\n                raise exception_class(response, value)\n            raise exception_class(value)\n        if message == \"\" and 'message' in value:\n            message = value['message']\n    \n        screen = None\n        if 'screen' in value:\n            screen = value['screen']\n    \n        stacktrace = None\n        if 'stackTrace' in value and value['stackTrace']:\n            stacktrace = []\n            try:\n                for frame in value['stackTrace']:\n                    line = self._value_or_default(frame, 'lineNumber', '')\n                    file = self._value_or_default(frame, 'fileName', '<anonymous>')\n                    if line:\n                        file = \"%s:%s\" % (file, line)\n                    meth = self._value_or_default(frame, 'methodName', '<anonymous>')\n                    if 'className' in frame:\n                        meth = \"%s.%s\" % (frame['className'], meth)\n                    msg = \"    at %s (%s)\"\n                    msg = msg % (meth, file)\n                    stacktrace.append(msg)\n            except TypeError:\n                pass\n        if exception_class == ErrorInResponseException:\n            raise exception_class(response, message)\n        elif exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if 'data' in value:\n                alert_text = value['data'].get('text')\n            elif 'alert' in value:\n                alert_text = value['alert'].get('text')\n            raise exception_class(message, screen, stacktrace, alert_text)\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed\nE       from unknown error: web view not found\nE         (Session info: chrome=83.0.4103.61)\n\n..\\..\\..\\pycharmprojects\\mattamyhomes\\venv\\lib\\site-packages\\selenium\\webdriver\\remote\\errorhandler.py:242: NoSuchWindowException",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "a239d849fd65dee2",
+      "name" : "log",
+      "source" : "a239d849fd65dee2.txt",
+      "type" : "text/plain",
+      "size" : 689
+    }, {
+      "uid" : "80111f8a52d32fdd",
+      "name" : "stdout",
+      "source" : "80111f8a52d32fdd.txt",
+      "type" : "text/plain",
+      "size" : 132
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 0,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "_UnitTestCase__pytest_class_setup::0",
+    "time" : {
+      "start" : 1591691765654,
+      "stop" : 1591691765654,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "oneTimeSetUp::0",
+    "time" : {
+      "start" : 1591691763561,
+      "stop" : 1591691765649,
+      "duration" : 2088
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_regression_suite"
+  }, {
+    "name" : "subSuite",
+    "value" : "HeaderTests"
+  }, {
+    "name" : "host",
+    "value" : "EXIPC0154"
+  }, {
+    "name" : "thread",
+    "value" : "24780-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_regression_suite"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "22fb718a43263864",
+      "status" : "passed",
+      "time" : {
+        "start" : 1591432285380,
+        "stop" : 1591432285430,
+        "duration" : 50
+      }
+    }, {
+      "uid" : "c3de63fe0a6dd8db",
+      "status" : "passed",
+      "time" : {
+        "start" : 1591087031230,
+        "stop" : 1591087031293,
+        "duration" : 63
+      }
+    }, {
+      "uid" : "ef360d4fc9c0b4a1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1591000115714,
+        "stop" : 1591000115775,
+        "duration" : 61
+      }
+    }, {
+      "uid" : "c825186860d4a6bb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590998635278,
+        "stop" : 1590998635342,
+        "duration" : 64
+      }
+    }, {
+      "uid" : "ecc8f370aa31693a",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 81",
+      "time" : {
+        "start" : 1590913653543,
+        "stop" : 1590913653543,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "645259b6637be8f9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590827340874,
+        "stop" : 1590827340954,
+        "duration" : 80
+      }
+    }, {
+      "uid" : "a877b862f4b6ecae",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590740989128,
+        "stop" : 1590740989220,
+        "duration" : 92
+      }
+    }, {
+      "uid" : "64a9f222b569321",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=81.0.4044.138)",
+      "time" : {
+        "start" : 1590654886710,
+        "stop" : 1590654886729,
+        "duration" : 19
+      }
+    }, {
+      "uid" : "97fef47a37084e6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590568908014,
+        "stop" : 1590568908149,
+        "duration" : 135
+      }
+    }, {
+      "uid" : "8b6ba610a57dfa84",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590405823640,
+        "stop" : 1590405823703,
+        "duration" : 63
+      }
+    }, {
+      "uid" : "8d0abb364e648f51",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590404541772,
+        "stop" : 1590404542056,
+        "duration" : 284
+      }
+    }, {
+      "uid" : "3fb9027deb39cc51",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590404540941,
+        "stop" : 1590404541491,
+        "duration" : 550
+      }
+    }, {
+      "uid" : "92b72356887d3f7d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589610705824,
+        "stop" : 1589610705955,
+        "duration" : 131
+      }
+    }, {
+      "uid" : "834ccfede333c6c3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589609717336,
+        "stop" : 1589609717470,
+        "duration" : 134
+      }
+    }, {
+      "uid" : "7d23b863204fef62",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589609463268,
+        "stop" : 1589609463359,
+        "duration" : 91
+      }
+    }, {
+      "uid" : "88ef26a5c5d0fd15",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589609007023,
+        "stop" : 1589609007135,
+        "duration" : 112
+      }
+    }, {
+      "uid" : "a3d409676a996195",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home",
+      "time" : {
+        "start" : 1589607872338,
+        "stop" : 1589607872338,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "5c31d9a1139131f6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589606536190,
+        "stop" : 1589606536325,
+        "duration" : 135
+      }
+    }, {
+      "uid" : "cd493962b289eb73",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589597937638,
+        "stop" : 1589597937754,
+        "duration" : 116
+      }
+    }, {
+      "uid" : "a27c3a46e1e1500d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589596725615,
+        "stop" : 1589596725708,
+        "duration" : 93
+      }
+    }, {
+      "uid" : "6b74c9133e216fe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589534597935,
+        "stop" : 1589534598013,
+        "duration" : 78
+      }
+    }, {
+      "uid" : "9ed5a41aeb64671f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589469220842,
+        "stop" : 1589469220979,
+        "duration" : 137
+      }
+    }, {
+      "uid" : "75de4040ab747272",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589386821759,
+        "stop" : 1589386821823,
+        "duration" : 64
+      }
+    }, {
+      "uid" : "306ec7f8008b2be8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589272269779,
+        "stop" : 1589272269846,
+        "duration" : 67
+      }
+    }, {
+      "uid" : "56c4b6d6e1fc021c",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589258747384,
+        "stop" : 1589258759629,
+        "duration" : 12245
+      }
+    }, {
+      "uid" : "64559bd9622fd5f6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589258602036,
+        "stop" : 1589258602100,
+        "duration" : 64
+      }
+    }, {
+      "uid" : "8f841cad54fdcceb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589255149446,
+        "stop" : 1589255149499,
+        "duration" : 53
+      }
+    }, {
+      "uid" : "4d7333d3612a4064",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589253267103,
+        "stop" : 1589253278965,
+        "duration" : 11862
+      }
+    }, {
+      "uid" : "96132dac575febb8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589216213689,
+        "stop" : 1589216213732,
+        "duration" : 43
+      }
+    }, {
+      "uid" : "720ecbbf768cb6a8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589207829027,
+        "stop" : 1589207829068,
+        "duration" : 41
+      }
+    }, {
+      "uid" : "fc6673660ba769ff",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589206367778,
+        "stop" : 1589206367845,
+        "duration" : 67
+      }
+    }, {
+      "uid" : "b8997734e1e137cc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589205418085,
+        "stop" : 1589205418130,
+        "duration" : 45
+      }
+    }, {
+      "uid" : "22bb88aee349d22a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589203405268,
+        "stop" : 1589203405345,
+        "duration" : 77
+      }
+    }, {
+      "uid" : "75b415b6c3617231",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589163924233,
+        "stop" : 1589163924284,
+        "duration" : 51
+      }
+    }, {
+      "uid" : "a657eb9bb3f47690",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589113113373,
+        "stop" : 1589113113420,
+        "duration" : 47
+      }
+    }, {
+      "uid" : "cee0877afec568b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588853744619,
+        "stop" : 1588853744671,
+        "duration" : 52
+      }
+    }, {
+      "uid" : "a1673a314e89b1d5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588852432843,
+        "stop" : 1588852432905,
+        "duration" : 62
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 3,
+        "skipped" : 0,
+        "passed" : 39,
+        "unknown" : 0,
+        "total" : 43
+      },
+      "items" : [ {
+        "uid" : "24f30607edb24b32",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/61/allure/#testresult/24f30607edb24b32",
+        "status" : "passed",
+        "time" : {
+          "start" : 1591432285380,
+          "stop" : 1591432285430,
+          "duration" : 50
+        }
+      }, {
+        "uid" : "cc50c44928e750c7",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/60/allure/#testresult/cc50c44928e750c7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1591432285380,
+          "stop" : 1591432285430,
+          "duration" : 50
+        }
+      }, {
+        "uid" : "2faca9099b88e703",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/59/allure/#testresult/2faca9099b88e703",
+        "status" : "passed",
+        "time" : {
+          "start" : 1591432285380,
+          "stop" : 1591432285430,
+          "duration" : 50
+        }
+      }, {
+        "uid" : "cc11e66cd76bf038",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/58/allure/#testresult/cc11e66cd76bf038",
+        "status" : "passed",
+        "time" : {
+          "start" : 1591087031230,
+          "stop" : 1591087031293,
+          "duration" : 63
+        }
+      }, {
+        "uid" : "ced6ca03e16924b3",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/57/allure/#testresult/ced6ca03e16924b3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1591087031230,
+          "stop" : 1591087031293,
+          "duration" : 63
+        }
+      }, {
+        "uid" : "8397885669499bc5",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/56/allure/#testresult/8397885669499bc5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1591087031230,
+          "stop" : 1591087031293,
+          "duration" : 63
+        }
+      }, {
+        "uid" : "ab64448d07bb7f40",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/55/allure/#testresult/ab64448d07bb7f40",
+        "status" : "passed",
+        "time" : {
+          "start" : 1591087031230,
+          "stop" : 1591087031293,
+          "duration" : 63
+        }
+      }, {
+        "uid" : "1a91891bf17579dc",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/54/allure/#testresult/1a91891bf17579dc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1591000115714,
+          "stop" : 1591000115775,
+          "duration" : 61
+        }
+      }, {
+        "uid" : "4e38e58fc1a7b854",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/53/allure/#testresult/4e38e58fc1a7b854",
+        "status" : "passed",
+        "time" : {
+          "start" : 1590998635278,
+          "stop" : 1590998635342,
+          "duration" : 64
+        }
+      }, {
+        "uid" : "ff4c8e3a4462c6ef",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/52/allure/#testresult/ff4c8e3a4462c6ef",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 81",
+        "time" : {
+          "start" : 1590913653543,
+          "stop" : 1590913653543,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "d3cd72416024ad7a",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/51/allure/#testresult/d3cd72416024ad7a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1590827340874,
+          "stop" : 1590827340954,
+          "duration" : 80
+        }
+      }, {
+        "uid" : "3e1e5768c25efa59",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/50/allure/#testresult/3e1e5768c25efa59",
+        "status" : "passed",
+        "time" : {
+          "start" : 1590740989128,
+          "stop" : 1590740989220,
+          "duration" : 92
+        }
+      }, {
+        "uid" : "71e3a7f3d5daf0f0",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/49/allure/#testresult/71e3a7f3d5daf0f0",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=81.0.4044.138)",
+        "time" : {
+          "start" : 1590654886710,
+          "stop" : 1590654886729,
+          "duration" : 19
+        }
+      }, {
+        "uid" : "d4b12b12132fd74d",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/48/allure/#testresult/d4b12b12132fd74d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1590568908014,
+          "stop" : 1590568908149,
+          "duration" : 135
+        }
+      }, {
+        "uid" : "8e266d11e7befcc",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/47/allure/#testresult/8e266d11e7befcc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1590405823640,
+          "stop" : 1590405823703,
+          "duration" : 63
+        }
+      }, {
+        "uid" : "3ab1f8a6f4592ee8",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/46/allure/#testresult/3ab1f8a6f4592ee8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1590405823640,
+          "stop" : 1590405823703,
+          "duration" : 63
+        }
+      }, {
+        "uid" : "6cb47f2600691896",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/45/allure/#testresult/6cb47f2600691896",
+        "status" : "passed",
+        "time" : {
+          "start" : 1590404541772,
+          "stop" : 1590404542056,
+          "duration" : 284
+        }
+      }, {
+        "uid" : "2383f25446bd814c",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/43/allure/#testresult/2383f25446bd814c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1589610705824,
+          "stop" : 1589610705955,
+          "duration" : 131
+        }
+      }, {
+        "uid" : "c220b9208624a625",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/42/allure/#testresult/c220b9208624a625",
+        "status" : "passed",
+        "time" : {
+          "start" : 1589610705824,
+          "stop" : 1589610705955,
+          "duration" : 131
+        }
+      }, {
+        "uid" : "85aa4047f6603e55",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/41/allure/#testresult/85aa4047f6603e55",
+        "status" : "passed",
+        "time" : {
+          "start" : 1589609717336,
+          "stop" : 1589609717470,
+          "duration" : 134
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "12d795bd48dc494c.json",
+  "parameterValues" : [ ]
+}
