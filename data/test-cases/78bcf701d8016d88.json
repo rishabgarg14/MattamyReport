@@ -1,0 +1,686 @@
+{
+  "uid" : "78bcf701d8016d88",
+  "name" : "test_countryToggleClick",
+  "fullName" : "test_regression_suite.HeaderTests#test_countryToggleClick",
+  "historyId" : "6c053e0624337537ed7927f4232d7df8",
+  "time" : {
+    "start" : 1591778564376,
+    "stop" : 1591778595719,
+    "duration" : 31343
+  },
+  "status" : "broken",
+  "statusMessage" : "TypeError: argument of type 'NoneType' is not iterable",
+  "statusTrace" : "self = <tests.home.header_test.HeaderTests testMethod=test_countryToggleClick>\n\n    def test_countryToggleClick(self):\n>       result = self.hp.verifyToggleClick()\n\nhome\\header_test.py:48: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <pages.home.header_page.HeaderPage object at 0x000001DD3D643A60>\n\n    def verifyToggleClick(self):\n        oldAttribute = self.getAttribute(self._usa_text, \"xpath\", \"class\")\n        newValue = \"\"\n        self.clickCountrySelector()\n        newAttribute = self.getAttribute(self._usa_text, \"xpath\", \"class\")\n    \n>       if \"text-action-blue\" in oldAttribute:\nE       TypeError: argument of type 'NoneType' is not iterable\n\n..\\pages\\home\\header_page.py:79: TypeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "browser",
+    "time" : {
+      "start" : 1591778468460,
+      "stop" : 1591778468460,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "oneTimeSetUp",
+    "time" : {
+      "start" : 1591778468460,
+      "stop" : 1591778500942,
+      "duration" : 32482
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "classSetUp",
+    "time" : {
+      "start" : 1591778564375,
+      "stop" : 1591778564375,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "_UnitTestCase__pytest_class_setup",
+    "time" : {
+      "start" : 1591778468459,
+      "stop" : 1591778468459,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "TypeError: argument of type 'NoneType' is not iterable",
+    "statusTrace" : "self = <tests.home.header_test.HeaderTests testMethod=test_countryToggleClick>\n\n    def test_countryToggleClick(self):\n>       result = self.hp.verifyToggleClick()\n\nhome\\header_test.py:48: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <pages.home.header_page.HeaderPage object at 0x000001DD3D643A60>\n\n    def verifyToggleClick(self):\n        oldAttribute = self.getAttribute(self._usa_text, \"xpath\", \"class\")\n        newValue = \"\"\n        self.clickCountrySelector()\n        newAttribute = self.getAttribute(self._usa_text, \"xpath\", \"class\")\n    \n>       if \"text-action-blue\" in oldAttribute:\nE       TypeError: argument of type 'NoneType' is not iterable\n\n..\\pages\\home\\header_page.py:79: TypeError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "ad887c42191a2a5f",
+      "name" : "log",
+      "source" : "ad887c42191a2a5f.txt",
+      "type" : "text/plain",
+      "size" : 1302
+    }, {
+      "uid" : "afd7a2ef950cf130",
+      "name" : "stdout",
+      "source" : "afd7a2ef950cf130.txt",
+      "type" : "text/plain",
+      "size" : 33
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 2
+  },
+  "afterStages" : [ {
+    "name" : "oneTimeSetUp::0",
+    "time" : {
+      "start" : 1591778596071,
+      "stop" : 1591778598221,
+      "duration" : 2150
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "_UnitTestCase__pytest_class_setup::0",
+    "time" : {
+      "start" : 1591778598229,
+      "stop" : 1591778598229,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_regression_suite"
+  }, {
+    "name" : "subSuite",
+    "value" : "HeaderTests"
+  }, {
+    "name" : "host",
+    "value" : "EXIPC0154"
+  }, {
+    "name" : "thread",
+    "value" : "11032-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_regression_suite"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "9ad8950b60ff0021",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1591691763178,
+        "stop" : 1591691763193,
+        "duration" : 15
+      }
+    }, {
+      "uid" : "401fe2f394bc066",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1591432285439,
+        "stop" : 1591432334623,
+        "duration" : 49184
+      }
+    }, {
+      "uid" : "c51896d91e298504",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1591087031304,
+        "stop" : 1591087062522,
+        "duration" : 31218
+      }
+    }, {
+      "uid" : "21dcf8d610b1353d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1591000115788,
+        "stop" : 1591000116241,
+        "duration" : 453
+      }
+    }, {
+      "uid" : "48c4ac190415eee0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590998635356,
+        "stop" : 1590998635720,
+        "duration" : 364
+      }
+    }, {
+      "uid" : "78ff3e35e97639bc",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 81",
+      "time" : {
+        "start" : 1590913653654,
+        "stop" : 1590913653654,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "c2c21754c72b7b22",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590827340966,
+        "stop" : 1590827341290,
+        "duration" : 324
+      }
+    }, {
+      "uid" : "3521616e0e799c81",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590740989231,
+        "stop" : 1590740989861,
+        "duration" : 630
+      }
+    }, {
+      "uid" : "556d90145dd3d7be",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1590654886993,
+        "stop" : 1590654887004,
+        "duration" : 11
+      }
+    }, {
+      "uid" : "296cec4d5d41b0e3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590568908164,
+        "stop" : 1590568908784,
+        "duration" : 620
+      }
+    }, {
+      "uid" : "4de9dabf2bf3299f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590405823717,
+        "stop" : 1590405824133,
+        "duration" : 416
+      }
+    }, {
+      "uid" : "bcb4f53f5aa37a39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590404542072,
+        "stop" : 1590404544521,
+        "duration" : 2449
+      }
+    }, {
+      "uid" : "844a0939e427dff9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590404541504,
+        "stop" : 1590404544145,
+        "duration" : 2641
+      }
+    }, {
+      "uid" : "6d5dabead17f400f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589610705970,
+        "stop" : 1589610706600,
+        "duration" : 630
+      }
+    }, {
+      "uid" : "1c11bfe6ae00107e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589609717482,
+        "stop" : 1589609718061,
+        "duration" : 579
+      }
+    }, {
+      "uid" : "2f9d2c588462ff1a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589609463372,
+        "stop" : 1589609463982,
+        "duration" : 610
+      }
+    }, {
+      "uid" : "d86eada8e674497a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589609007147,
+        "stop" : 1589609008099,
+        "duration" : 952
+      }
+    }, {
+      "uid" : "2415e1e4f62a548a",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home",
+      "time" : {
+        "start" : 1589607872680,
+        "stop" : 1589607872680,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "e688eab43d711a83",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589606536337,
+        "stop" : 1589606536944,
+        "duration" : 607
+      }
+    }, {
+      "uid" : "375b9631a52789b4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589597937766,
+        "stop" : 1589597938542,
+        "duration" : 776
+      }
+    }, {
+      "uid" : "f1245c4f332b7afc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589596725721,
+        "stop" : 1589596726384,
+        "duration" : 663
+      }
+    }, {
+      "uid" : "4c76b8967eb47293",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589534598027,
+        "stop" : 1589534598646,
+        "duration" : 619
+      }
+    }, {
+      "uid" : "ac1e0aa1882c09b4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589469220992,
+        "stop" : 1589469221595,
+        "duration" : 603
+      }
+    }, {
+      "uid" : "468b2d03c3f2d92b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589386821838,
+        "stop" : 1589386822254,
+        "duration" : 416
+      }
+    }, {
+      "uid" : "1ff03774399ec9cb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589272269864,
+        "stop" : 1589272270255,
+        "duration" : 391
+      }
+    }, {
+      "uid" : "a4547e8987adf84e",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1589258759659,
+        "stop" : 1589258791340,
+        "duration" : 31681
+      }
+    }, {
+      "uid" : "e657d06eb1b30f2d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589258602115,
+        "stop" : 1589258602534,
+        "duration" : 419
+      }
+    }, {
+      "uid" : "51c825804fdfbf45",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589255149513,
+        "stop" : 1589255149845,
+        "duration" : 332
+      }
+    }, {
+      "uid" : "75f25e48e241258",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1589253278998,
+        "stop" : 1589253310594,
+        "duration" : 31596
+      }
+    }, {
+      "uid" : "124cf82061e39fe2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589216213743,
+        "stop" : 1589216214228,
+        "duration" : 485
+      }
+    }, {
+      "uid" : "51c4df83c41d3582",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589207829079,
+        "stop" : 1589207829463,
+        "duration" : 384
+      }
+    }, {
+      "uid" : "fb63fdf51b324c40",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589206367858,
+        "stop" : 1589206368221,
+        "duration" : 363
+      }
+    }, {
+      "uid" : "4a668892944c5c6d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589205418139,
+        "stop" : 1589205418480,
+        "duration" : 341
+      }
+    }, {
+      "uid" : "d7978bc99904ff",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589203405358,
+        "stop" : 1589203405670,
+        "duration" : 312
+      }
+    }, {
+      "uid" : "e37bbf099ab12fa6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589163924297,
+        "stop" : 1589163924679,
+        "duration" : 382
+      }
+    }, {
+      "uid" : "b7c898c6ccf7c74",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589113113433,
+        "stop" : 1589113113816,
+        "duration" : 383
+      }
+    }, {
+      "uid" : "afe6f3ca05310917",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588853744681,
+        "stop" : 1588853745030,
+        "duration" : 349
+      }
+    }, {
+      "uid" : "7f4e08efcf78c8fb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588852432917,
+        "stop" : 1588852433346,
+        "duration" : 429
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 12,
+        "skipped" : 0,
+        "passed" : 32,
+        "unknown" : 0,
+        "total" : 44
+      },
+      "items" : [ {
+        "uid" : "afdc8ad85d7fbc7",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/62/allure/#testresult/afdc8ad85d7fbc7",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1591691763178,
+          "stop" : 1591691763193,
+          "duration" : 15
+        }
+      }, {
+        "uid" : "9561ce4660b89ad7",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/61/allure/#testresult/9561ce4660b89ad7",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1591432285439,
+          "stop" : 1591432334623,
+          "duration" : 49184
+        }
+      }, {
+        "uid" : "15aca8639c26192d",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/60/allure/#testresult/15aca8639c26192d",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1591432285439,
+          "stop" : 1591432334623,
+          "duration" : 49184
+        }
+      }, {
+        "uid" : "30b3e6b4bfb51024",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/59/allure/#testresult/30b3e6b4bfb51024",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1591432285439,
+          "stop" : 1591432334623,
+          "duration" : 49184
+        }
+      }, {
+        "uid" : "a6a0383abb90a0c5",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/58/allure/#testresult/a6a0383abb90a0c5",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1591087031304,
+          "stop" : 1591087062522,
+          "duration" : 31218
+        }
+      }, {
+        "uid" : "cd22585a4c49ce07",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/57/allure/#testresult/cd22585a4c49ce07",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1591087031304,
+          "stop" : 1591087062522,
+          "duration" : 31218
+        }
+      }, {
+        "uid" : "ad82aa01d25b2efa",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/56/allure/#testresult/ad82aa01d25b2efa",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1591087031304,
+          "stop" : 1591087062522,
+          "duration" : 31218
+        }
+      }, {
+        "uid" : "71161fd42171defb",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/55/allure/#testresult/71161fd42171defb",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1591087031304,
+          "stop" : 1591087062522,
+          "duration" : 31218
+        }
+      }, {
+        "uid" : "7e692c7b0c922397",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/54/allure/#testresult/7e692c7b0c922397",
+        "status" : "passed",
+        "time" : {
+          "start" : 1591000115788,
+          "stop" : 1591000116241,
+          "duration" : 453
+        }
+      }, {
+        "uid" : "7b66eb4b29d3a53",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/53/allure/#testresult/7b66eb4b29d3a53",
+        "status" : "passed",
+        "time" : {
+          "start" : 1590998635356,
+          "stop" : 1590998635720,
+          "duration" : 364
+        }
+      }, {
+        "uid" : "4003dbd759ec1882",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/52/allure/#testresult/4003dbd759ec1882",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 81",
+        "time" : {
+          "start" : 1590913653654,
+          "stop" : 1590913653654,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "6820c064b01b6716",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/51/allure/#testresult/6820c064b01b6716",
+        "status" : "passed",
+        "time" : {
+          "start" : 1590827340966,
+          "stop" : 1590827341290,
+          "duration" : 324
+        }
+      }, {
+        "uid" : "2897447c4a4e0be8",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/50/allure/#testresult/2897447c4a4e0be8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1590740989231,
+          "stop" : 1590740989861,
+          "duration" : 630
+        }
+      }, {
+        "uid" : "401f966e0b6c9e64",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/49/allure/#testresult/401f966e0b6c9e64",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1590654886993,
+          "stop" : 1590654887004,
+          "duration" : 11
+        }
+      }, {
+        "uid" : "1ae57e6c4b4e5582",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/48/allure/#testresult/1ae57e6c4b4e5582",
+        "status" : "passed",
+        "time" : {
+          "start" : 1590568908164,
+          "stop" : 1590568908784,
+          "duration" : 620
+        }
+      }, {
+        "uid" : "a326af5b5e9e2435",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/47/allure/#testresult/a326af5b5e9e2435",
+        "status" : "passed",
+        "time" : {
+          "start" : 1590405823717,
+          "stop" : 1590405824133,
+          "duration" : 416
+        }
+      }, {
+        "uid" : "f1f4c99cc449059a",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/46/allure/#testresult/f1f4c99cc449059a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1590405823717,
+          "stop" : 1590405824133,
+          "duration" : 416
+        }
+      }, {
+        "uid" : "5c52da24273ccd49",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/45/allure/#testresult/5c52da24273ccd49",
+        "status" : "passed",
+        "time" : {
+          "start" : 1590404542072,
+          "stop" : 1590404544521,
+          "duration" : 2449
+        }
+      }, {
+        "uid" : "361bf17fa683a149",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/43/allure/#testresult/361bf17fa683a149",
+        "status" : "passed",
+        "time" : {
+          "start" : 1589610705970,
+          "stop" : 1589610706600,
+          "duration" : 630
+        }
+      }, {
+        "uid" : "cf7eaff30a9dd24e",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/42/allure/#testresult/cf7eaff30a9dd24e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1589610705970,
+          "stop" : 1589610706600,
+          "duration" : 630
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "78bcf701d8016d88.json",
+  "parameterValues" : [ ]
+}
