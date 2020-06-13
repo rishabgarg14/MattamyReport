@@ -1,0 +1,736 @@
+{
+  "uid" : "3e02f087dfd5dfc1",
+  "name" : "test_faqLink",
+  "fullName" : "test_regression_suite.FooterTests#test_faqLink",
+  "historyId" : "7a51873bd392916254582a61f677b26e",
+  "time" : {
+    "start" : 1592046030680,
+    "stop" : 1592046055106,
+    "duration" : 24426
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError",
+  "statusTrace" : "self = <tests.home.footer_test.FooterTests testMethod=test_faqLink>\n\n    def test_faqLink(self):\n        result = self.fp.getFAQLinkStatus()\n>       self.ts.markFinal(\"test_faqLink\", result, \"Footer_Verified FAQ Link\")\n\nhome\\footer_test.py:44: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <utilities.casestatus.CaseStatus object at 0x000002152D514AF0>\ntestName = 'test_faqLink', result = False\nresultMessage = 'Footer_Verified FAQ Link'\n\n    def markFinal(self, testName, result, resultMessage):\n        \"\"\"\n        Mark the final result of verification point in a test case\n        This needs to be called at least once in a test case\n        This should be final test status of the test case\n        \"\"\"\n        self.setResult(result, resultMessage)\n    \n        if \"FAIL\" in self.resultList:\n            self.log.error(testName + \" Test Failed\")\n            self.resultList.clear()\n>           assert True == False\nE           AssertionError\n\n..\\utilities\\casestatus.py:74: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "browser",
+    "time" : {
+      "start" : 1592045839483,
+      "stop" : 1592045839483,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "classSetUp",
+    "time" : {
+      "start" : 1592046030678,
+      "stop" : 1592046030678,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "oneTimeSetUp",
+    "time" : {
+      "start" : 1592045839484,
+      "stop" : 1592045892569,
+      "duration" : 53085
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_UnitTestCase__pytest_class_setup",
+    "time" : {
+      "start" : 1592045839483,
+      "stop" : 1592045839483,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError",
+    "statusTrace" : "self = <tests.home.footer_test.FooterTests testMethod=test_faqLink>\n\n    def test_faqLink(self):\n        result = self.fp.getFAQLinkStatus()\n>       self.ts.markFinal(\"test_faqLink\", result, \"Footer_Verified FAQ Link\")\n\nhome\\footer_test.py:44: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <utilities.casestatus.CaseStatus object at 0x000002152D514AF0>\ntestName = 'test_faqLink', result = False\nresultMessage = 'Footer_Verified FAQ Link'\n\n    def markFinal(self, testName, result, resultMessage):\n        \"\"\"\n        Mark the final result of verification point in a test case\n        This needs to be called at least once in a test case\n        This should be final test status of the test case\n        \"\"\"\n        self.setResult(result, resultMessage)\n    \n        if \"FAIL\" in self.resultList:\n            self.log.error(testName + \" Test Failed\")\n            self.resultList.clear()\n>           assert True == False\nE           AssertionError\n\n..\\utilities\\casestatus.py:74: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "9999310448c068fa",
+      "name" : "Footer_Verified FAQ Link.1592046055104",
+      "source" : "9999310448c068fa.png",
+      "type" : "image/png",
+      "size" : 506639
+    }, {
+      "uid" : "aed3668635bf3a53",
+      "name" : "log",
+      "source" : "aed3668635bf3a53.txt",
+      "type" : "text/plain",
+      "size" : 1125
+    }, {
+      "uid" : "2428a33c8810e145",
+      "name" : "stdout",
+      "source" : "2428a33c8810e145.txt",
+      "type" : "text/plain",
+      "size" : 22
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ {
+    "name" : "oneTimeSetUp::0",
+    "time" : {
+      "start" : 1592046301854,
+      "stop" : 1592046304062,
+      "duration" : 2208
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_UnitTestCase__pytest_class_setup::0",
+    "time" : {
+      "start" : 1592046304069,
+      "stop" : 1592046304069,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_regression_suite"
+  }, {
+    "name" : "subSuite",
+    "value" : "FooterTests"
+  }, {
+    "name" : "host",
+    "value" : "EXIPC0154"
+  }, {
+    "name" : "thread",
+    "value" : "11832-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_regression_suite"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "a9ea3c8c24dd919",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1591950707232,
+        "stop" : 1591950731574,
+        "duration" : 24342
+      }
+    }, {
+      "uid" : "2dbcdd574fe1d631",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1591865336303,
+        "stop" : 1591865360521,
+        "duration" : 24218
+      }
+    }, {
+      "uid" : "4d8ddf7cf593acaf",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1591778280438,
+        "stop" : 1591778311747,
+        "duration" : 31309
+      }
+    }, {
+      "uid" : "bf1d8540b5944fbf",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1591691462438,
+        "stop" : 1591691487343,
+        "duration" : 24905
+      }
+    }, {
+      "uid" : "e880aa232b39345f",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=83.0.4103.61)",
+      "time" : {
+        "start" : 1591432240463,
+        "stop" : 1591432240469,
+        "duration" : 6
+      }
+    }, {
+      "uid" : "5b38280195aaf97",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1591086718064,
+        "stop" : 1591086743078,
+        "duration" : 25014
+      }
+    }, {
+      "uid" : "9578276227c5b60",
+      "status" : "passed",
+      "time" : {
+        "start" : 1591000071920,
+        "stop" : 1591000073609,
+        "duration" : 1689
+      }
+    }, {
+      "uid" : "9c2cf4734ef2c22e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590998596573,
+        "stop" : 1590998598085,
+        "duration" : 1512
+      }
+    }, {
+      "uid" : "f4bfdef0bee21a9d",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 81",
+      "time" : {
+        "start" : 1590913647530,
+        "stop" : 1590913647530,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "b8e46b9087b5fc4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590827287874,
+        "stop" : 1590827290024,
+        "duration" : 2150
+      }
+    }, {
+      "uid" : "f0275b9a52e38a23",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590740928684,
+        "stop" : 1590740930630,
+        "duration" : 1946
+      }
+    }, {
+      "uid" : "ceb8dd328158e82b",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: chrome not reachable\n  (Session info: chrome=81.0.4044.138)",
+      "time" : {
+        "start" : 1590654603756,
+        "stop" : 1590654627826,
+        "duration" : 24070
+      }
+    }, {
+      "uid" : "87f3b8d686e1aa4f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590568866639,
+        "stop" : 1590568867712,
+        "duration" : 1073
+      }
+    }, {
+      "uid" : "195da4192a030450",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590405781078,
+        "stop" : 1590405782172,
+        "duration" : 1094
+      }
+    }, {
+      "uid" : "2885767c69ae45b5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590404491861,
+        "stop" : 1590404493984,
+        "duration" : 2123
+      }
+    }, {
+      "uid" : "c637d22a356114de",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590404428769,
+        "stop" : 1590404431068,
+        "duration" : 2299
+      }
+    }, {
+      "uid" : "1caf89ddf2fdd02b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589610659535,
+        "stop" : 1589610660901,
+        "duration" : 1366
+      }
+    }, {
+      "uid" : "7cd5e410d01242f8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589609667592,
+        "stop" : 1589609669207,
+        "duration" : 1615
+      }
+    }, {
+      "uid" : "327ccca6df17cced",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589609417325,
+        "stop" : 1589609418809,
+        "duration" : 1484
+      }
+    }, {
+      "uid" : "1643cf0c4496c9c4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589608957184,
+        "stop" : 1589608958574,
+        "duration" : 1390
+      }
+    }, {
+      "uid" : "84007e18cd319934",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home",
+      "time" : {
+        "start" : 1589607867715,
+        "stop" : 1589607867715,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "7da0629489373d36",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589606493249,
+        "stop" : 1589606494552,
+        "duration" : 1303
+      }
+    }, {
+      "uid" : "92d065f532d38acd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589597892714,
+        "stop" : 1589597894767,
+        "duration" : 2053
+      }
+    }, {
+      "uid" : "6fcbcc53ac33543",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589596678931,
+        "stop" : 1589596680252,
+        "duration" : 1321
+      }
+    }, {
+      "uid" : "8a81c519ebf5d428",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589534504594,
+        "stop" : 1589534507902,
+        "duration" : 3308
+      }
+    }, {
+      "uid" : "52a223dfe6ddf78",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589469140522,
+        "stop" : 1589469142406,
+        "duration" : 1884
+      }
+    }, {
+      "uid" : "443b3be420018be5",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589386780414,
+        "stop" : 1589386781415,
+        "duration" : 1001
+      }
+    }, {
+      "uid" : "db9f5e4f86b0ca49",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589272052597,
+        "stop" : 1589272053748,
+        "duration" : 1151
+      }
+    }, {
+      "uid" : "ff5913429c1d02ad",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589258676690,
+        "stop" : 1589258677439,
+        "duration" : 749
+      }
+    }, {
+      "uid" : "8bab93b938816072",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589258564849,
+        "stop" : 1589258565966,
+        "duration" : 1117
+      }
+    }, {
+      "uid" : "734be86673ad560a",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589255118618,
+        "stop" : 1589255119486,
+        "duration" : 868
+      }
+    }, {
+      "uid" : "1677d0e1a238cd5d",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589253203306,
+        "stop" : 1589253204173,
+        "duration" : 867
+      }
+    }, {
+      "uid" : "c4abfa5ac83df880",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589216117824,
+        "stop" : 1589216118783,
+        "duration" : 959
+      }
+    }, {
+      "uid" : "e342158f5e3c27c9",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589207723649,
+        "stop" : 1589207724402,
+        "duration" : 753
+      }
+    }, {
+      "uid" : "ada24eefe6629ce5",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589206272612,
+        "stop" : 1589206273394,
+        "duration" : 782
+      }
+    }, {
+      "uid" : "476611607d8f938f",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589205347782,
+        "stop" : 1589205348914,
+        "duration" : 1132
+      }
+    }, {
+      "uid" : "d0d349f4f56e2d66",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589203297521,
+        "stop" : 1589203298426,
+        "duration" : 905
+      }
+    }, {
+      "uid" : "900bd655431149c3",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589163790054,
+        "stop" : 1589163790859,
+        "duration" : 805
+      }
+    }, {
+      "uid" : "2411975f321e7b54",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589113057538,
+        "stop" : 1589113058824,
+        "duration" : 1286
+      }
+    }, {
+      "uid" : "b66872375f45048",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1588853660545,
+        "stop" : 1588853661308,
+        "duration" : 763
+      }
+    }, {
+      "uid" : "4e75e3a2d7b20263",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1588852335340,
+        "stop" : 1588852336303,
+        "duration" : 963
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 24,
+        "broken" : 5,
+        "skipped" : 0,
+        "passed" : 18,
+        "unknown" : 0,
+        "total" : 47
+      },
+      "items" : [ {
+        "uid" : "d4ad79362a3182d2",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/65/allure/#testresult/d4ad79362a3182d2",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1591950707232,
+          "stop" : 1591950731574,
+          "duration" : 24342
+        }
+      }, {
+        "uid" : "f6a187c7e1c593cb",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/64/allure/#testresult/f6a187c7e1c593cb",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1591865336303,
+          "stop" : 1591865360521,
+          "duration" : 24218
+        }
+      }, {
+        "uid" : "61e15ae1c26f1971",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/63/allure/#testresult/61e15ae1c26f1971",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1591778280438,
+          "stop" : 1591778311747,
+          "duration" : 31309
+        }
+      }, {
+        "uid" : "13900cbfcd471957",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/62/allure/#testresult/13900cbfcd471957",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1591691462438,
+          "stop" : 1591691487343,
+          "duration" : 24905
+        }
+      }, {
+        "uid" : "4bc06ed26a70b503",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/61/allure/#testresult/4bc06ed26a70b503",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=83.0.4103.61)",
+        "time" : {
+          "start" : 1591432240463,
+          "stop" : 1591432240469,
+          "duration" : 6
+        }
+      }, {
+        "uid" : "ec747338d409107c",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/60/allure/#testresult/ec747338d409107c",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=83.0.4103.61)",
+        "time" : {
+          "start" : 1591432240463,
+          "stop" : 1591432240469,
+          "duration" : 6
+        }
+      }, {
+        "uid" : "d9568a3edf769b62",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/59/allure/#testresult/d9568a3edf769b62",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=83.0.4103.61)",
+        "time" : {
+          "start" : 1591432240463,
+          "stop" : 1591432240469,
+          "duration" : 6
+        }
+      }, {
+        "uid" : "21e996a889055656",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/58/allure/#testresult/21e996a889055656",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1591086718064,
+          "stop" : 1591086743078,
+          "duration" : 25014
+        }
+      }, {
+        "uid" : "1a0a19118b273491",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/57/allure/#testresult/1a0a19118b273491",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1591086718064,
+          "stop" : 1591086743078,
+          "duration" : 25014
+        }
+      }, {
+        "uid" : "577a080f6e14fdd7",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/56/allure/#testresult/577a080f6e14fdd7",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1591086718064,
+          "stop" : 1591086743078,
+          "duration" : 25014
+        }
+      }, {
+        "uid" : "555b4b20a831b188",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/55/allure/#testresult/555b4b20a831b188",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1591086718064,
+          "stop" : 1591086743078,
+          "duration" : 25014
+        }
+      }, {
+        "uid" : "fc89cf994aabf618",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/54/allure/#testresult/fc89cf994aabf618",
+        "status" : "passed",
+        "time" : {
+          "start" : 1591000071920,
+          "stop" : 1591000073609,
+          "duration" : 1689
+        }
+      }, {
+        "uid" : "3982ea4f9e9d178f",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/53/allure/#testresult/3982ea4f9e9d178f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1590998596573,
+          "stop" : 1590998598085,
+          "duration" : 1512
+        }
+      }, {
+        "uid" : "280734657eac2a09",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/52/allure/#testresult/280734657eac2a09",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 81",
+        "time" : {
+          "start" : 1590913647530,
+          "stop" : 1590913647530,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "39b6b522cc451f18",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/51/allure/#testresult/39b6b522cc451f18",
+        "status" : "passed",
+        "time" : {
+          "start" : 1590827287874,
+          "stop" : 1590827290024,
+          "duration" : 2150
+        }
+      }, {
+        "uid" : "2767a46da3d91f09",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/50/allure/#testresult/2767a46da3d91f09",
+        "status" : "passed",
+        "time" : {
+          "start" : 1590740928684,
+          "stop" : 1590740930630,
+          "duration" : 1946
+        }
+      }, {
+        "uid" : "a6c7720a6a99baa6",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/49/allure/#testresult/a6c7720a6a99baa6",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: chrome not reachable\n  (Session info: chrome=81.0.4044.138)",
+        "time" : {
+          "start" : 1590654603756,
+          "stop" : 1590654627826,
+          "duration" : 24070
+        }
+      }, {
+        "uid" : "eab0d59707ab624c",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/48/allure/#testresult/eab0d59707ab624c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1590568866639,
+          "stop" : 1590568867712,
+          "duration" : 1073
+        }
+      }, {
+        "uid" : "1a89527a8bf64e38",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/47/allure/#testresult/1a89527a8bf64e38",
+        "status" : "passed",
+        "time" : {
+          "start" : 1590405781078,
+          "stop" : 1590405782172,
+          "duration" : 1094
+        }
+      }, {
+        "uid" : "eaf7aabda1b62d2d",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/46/allure/#testresult/eaf7aabda1b62d2d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1590405781078,
+          "stop" : 1590405782172,
+          "duration" : 1094
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "3e02f087dfd5dfc1.json",
+  "parameterValues" : [ ]
+}
