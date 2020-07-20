@@ -1,0 +1,173 @@
+{
+  "uid" : "65da16b2f62f0b0",
+  "name" : "test_FindYourDreamHomeDropdownExist",
+  "fullName" : "test_regression_suite.HeaderTests#test_FindYourDreamHomeDropdownExist",
+  "historyId" : "64d2000b8f36f3b9c6b50c30a5af008a",
+  "time" : {
+    "start" : 1594283789822,
+    "stop" : 1594283803328,
+    "duration" : 13506
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError",
+  "statusTrace" : "self = <tests.home.header_test.HeaderTests testMethod=test_FindYourDreamHomeDropdownExist>\n\n    def test_FindYourDreamHomeDropdownExist(self):\n        result = self.hp.verifyFYDHElement()\n        self.hp.clickFindYourDreamHome()\n>       self.ts.markFinal(\"test_FindYourDreamHomeDropdownExist\", result,\n                          \"Verify that element exist under 'Find Your Dream Home' dropdown executed\")\n\nhome\\header_test.py:29: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <utilities.casestatus.CaseStatus object at 0x000001EB56E602B0>\ntestName = 'test_FindYourDreamHomeDropdownExist', result = False\nresultMessage = \"Verify that element exist under 'Find Your Dream Home' dropdown executed\"\n\n    def markFinal(self, testName, result, resultMessage):\n        \"\"\"\n        Mark the final result of verification point in a test case\n        This needs to be called at least once in a test case\n        This should be final test status of the test case\n        \"\"\"\n        self.setResult(result, resultMessage)\n    \n        if \"FAIL\" in self.resultList:\n            self.log.error(testName + \" Test Failed\")\n            self.resultList.clear()\n>           assert True == False\nE           AssertionError\n\n..\\utilities\\casestatus.py:74: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "browser",
+    "time" : {
+      "start" : 1594283764325,
+      "stop" : 1594283764325,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "classSetUp",
+    "time" : {
+      "start" : 1594283789821,
+      "stop" : 1594283789821,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "oneTimeSetUp",
+    "time" : {
+      "start" : 1594283764326,
+      "stop" : 1594283789821,
+      "duration" : 25495
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_UnitTestCase__pytest_class_setup",
+    "time" : {
+      "start" : 1594283764324,
+      "stop" : 1594283764324,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError",
+    "statusTrace" : "self = <tests.home.header_test.HeaderTests testMethod=test_FindYourDreamHomeDropdownExist>\n\n    def test_FindYourDreamHomeDropdownExist(self):\n        result = self.hp.verifyFYDHElement()\n        self.hp.clickFindYourDreamHome()\n>       self.ts.markFinal(\"test_FindYourDreamHomeDropdownExist\", result,\n                          \"Verify that element exist under 'Find Your Dream Home' dropdown executed\")\n\nhome\\header_test.py:29: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <utilities.casestatus.CaseStatus object at 0x000001EB56E602B0>\ntestName = 'test_FindYourDreamHomeDropdownExist', result = False\nresultMessage = \"Verify that element exist under 'Find Your Dream Home' dropdown executed\"\n\n    def markFinal(self, testName, result, resultMessage):\n        \"\"\"\n        Mark the final result of verification point in a test case\n        This needs to be called at least once in a test case\n        This should be final test status of the test case\n        \"\"\"\n        self.setResult(result, resultMessage)\n    \n        if \"FAIL\" in self.resultList:\n            self.log.error(testName + \" Test Failed\")\n            self.resultList.clear()\n>           assert True == False\nE           AssertionError\n\n..\\utilities\\casestatus.py:74: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "bc317ea0919fe653",
+      "name" : "Verify that element exist under 'Find Your Dream Home' dropdown executed.1594283803325",
+      "source" : "bc317ea0919fe653.png",
+      "type" : "image/png",
+      "size" : 232602
+    }, {
+      "uid" : "55246c5b11b47a8e",
+      "name" : "log",
+      "source" : "55246c5b11b47a8e.txt",
+      "type" : "text/plain",
+      "size" : 2433
+    }, {
+      "uid" : "eb1414ff109fba11",
+      "name" : "stdout",
+      "source" : "eb1414ff109fba11.txt",
+      "type" : "text/plain",
+      "size" : 22
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ {
+    "name" : "oneTimeSetUp::0",
+    "time" : {
+      "start" : 1594283835469,
+      "stop" : 1594283837671,
+      "duration" : 2202
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_UnitTestCase__pytest_class_setup::0",
+    "time" : {
+      "start" : 1594283837680,
+      "stop" : 1594283837681,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_regression_suite"
+  }, {
+    "name" : "subSuite",
+    "value" : "HeaderTests"
+  }, {
+    "name" : "host",
+    "value" : "EXIPC0154"
+  }, {
+    "name" : "thread",
+    "value" : "14644-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_regression_suite"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "65da16b2f62f0b0.json",
+  "parameterValues" : [ ]
+}
