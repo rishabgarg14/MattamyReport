@@ -1,0 +1,21 @@
+INFO     WebDriverFactory:webdriverfactory.py:81 Opening Chrome
+INFO     WebDriverFactory:webdriverfactory.py:87 Maximizing browser window
+INFO     WebDriverFactory:webdriverfactory.py:90 Opened Url http://devmh-admin.bhitest.com/
+INFO     SeleniumDriver:selenium_driver.py:259 Waiting for maximum :: 10 :: seconds for element to appear
+ERROR    SeleniumDriver:selenium_driver.py:271 Element with locator: (//button[text()='USA'])[3] and locator type: xpath not appeared on the web page
+ERROR    SeleniumDriver:selenium_driver.py:122 Cannot click on the element with locator: (//button[text()='USA'])[3] locatorType: xpathMessage: javascript error: Cannot read property 'click' of null
+  (Session info: chrome=83.0.4103.116)
+
+INFO     <module>:conftest.py:24 Clicked USA as country
+INFO     FooterPage:selenium_driver.py:259 Waiting for maximum :: 10 :: seconds for element to appear
+ERROR    FooterPage:selenium_driver.py:271 Element with locator: //a[contains(@href,'facebook')] and locator type: xpath not appeared on the web page
+INFO     FooterPage:selenium_driver.py:284 Page scrolled up
+INFO     FooterPage:footer_page.py:37 Scrolled down to footer
+INFO     FooterPage:selenium_driver.py:259 Waiting for maximum :: 10 :: seconds for element to appear
+ERROR    FooterPage:selenium_driver.py:271 Element with locator: Accessibility and locator type: link not appeared on the web page
+DEBUG    FooterPage:selenium_driver.py:176 Before finding attribute
+ERROR    FooterPage:selenium_driver.py:188 Failed to get attribute on element 
+ERROR    FooterPage:basepage.py:92 Unable to verify URL status
+INFO     CaseStatus:casestatus.py:37  ### Verification FAIL :: Footer_Verified Accessibility Link
+INFO     CaseStatus:selenium_driver.py:35 Screenshot save to directory: C:\Users\rgarg\Desktop\JenkinsJob\base\../screenshots/Footer_Verified Accessibility Link.1594888284736.png
+ERROR    CaseStatus:casestatus.py:72 test_accessibilityLink Test Failed
