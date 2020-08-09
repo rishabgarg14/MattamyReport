@@ -1,0 +1,173 @@
+{
+  "uid" : "82672dd1336cac3a",
+  "name" : "test_experienceMattamyRedirect",
+  "fullName" : "test_regression_suite.HeaderTests#test_experienceMattamyRedirect",
+  "historyId" : "7b30fd80d841cf92e096bbd69f997293",
+  "time" : {
+    "start" : 1592815048525,
+    "stop" : 1592815061281,
+    "duration" : 12756
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError",
+  "statusTrace" : "self = <tests.home.header_test.HeaderTests testMethod=test_experienceMattamyRedirect>\n\n    def test_experienceMattamyRedirect(self):\n        result = self.hp.verifyExperienceMattamyRedirect()\n>       self.ts.markFinal(\"test_experienceMattamyRedirect\", result,\n                          \"'Experience Mattamy' redirection test case executed\")\n\nhome\\header_test.py:44: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <utilities.casestatus.CaseStatus object at 0x000001D77C9E3790>\ntestName = 'test_experienceMattamyRedirect', result = False\nresultMessage = \"'Experience Mattamy' redirection test case executed\"\n\n    def markFinal(self, testName, result, resultMessage):\n        \"\"\"\n        Mark the final result of verification point in a test case\n        This needs to be called at least once in a test case\n        This should be final test status of the test case\n        \"\"\"\n        self.setResult(result, resultMessage)\n    \n        if \"FAIL\" in self.resultList:\n            self.log.error(testName + \" Test Failed\")\n            self.resultList.clear()\n>           assert True == False\nE           AssertionError\n\n..\\utilities\\casestatus.py:74: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_UnitTestCase__pytest_class_setup",
+    "time" : {
+      "start" : 1592814937208,
+      "stop" : 1592814937208,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "classSetUp",
+    "time" : {
+      "start" : 1592815048524,
+      "stop" : 1592815048524,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "oneTimeSetUp",
+    "time" : {
+      "start" : 1592814937209,
+      "stop" : 1592814962603,
+      "duration" : 25394
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "browser",
+    "time" : {
+      "start" : 1592814937209,
+      "stop" : 1592814937209,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError",
+    "statusTrace" : "self = <tests.home.header_test.HeaderTests testMethod=test_experienceMattamyRedirect>\n\n    def test_experienceMattamyRedirect(self):\n        result = self.hp.verifyExperienceMattamyRedirect()\n>       self.ts.markFinal(\"test_experienceMattamyRedirect\", result,\n                          \"'Experience Mattamy' redirection test case executed\")\n\nhome\\header_test.py:44: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <utilities.casestatus.CaseStatus object at 0x000001D77C9E3790>\ntestName = 'test_experienceMattamyRedirect', result = False\nresultMessage = \"'Experience Mattamy' redirection test case executed\"\n\n    def markFinal(self, testName, result, resultMessage):\n        \"\"\"\n        Mark the final result of verification point in a test case\n        This needs to be called at least once in a test case\n        This should be final test status of the test case\n        \"\"\"\n        self.setResult(result, resultMessage)\n    \n        if \"FAIL\" in self.resultList:\n            self.log.error(testName + \" Test Failed\")\n            self.resultList.clear()\n>           assert True == False\nE           AssertionError\n\n..\\utilities\\casestatus.py:74: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "1e9cb69b090e663c",
+      "name" : "'Experience Mattamy' redirection test case executed.1592815061279",
+      "source" : "1e9cb69b090e663c.png",
+      "type" : "image/png",
+      "size" : 15607
+    }, {
+      "uid" : "f396ee32ce0d058d",
+      "name" : "log",
+      "source" : "f396ee32ce0d058d.txt",
+      "type" : "text/plain",
+      "size" : 1144
+    }, {
+      "uid" : "386f0df6fbe73b06",
+      "name" : "stdout",
+      "source" : "386f0df6fbe73b06.txt",
+      "type" : "text/plain",
+      "size" : 11
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 3
+  },
+  "afterStages" : [ {
+    "name" : "_UnitTestCase__pytest_class_setup::0",
+    "time" : {
+      "start" : 1592815088947,
+      "stop" : 1592815088947,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "oneTimeSetUp::0",
+    "time" : {
+      "start" : 1592815086785,
+      "stop" : 1592815088942,
+      "duration" : 2157
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_regression_suite"
+  }, {
+    "name" : "subSuite",
+    "value" : "HeaderTests"
+  }, {
+    "name" : "host",
+    "value" : "EXIPC0154"
+  }, {
+    "name" : "thread",
+    "value" : "6444-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_regression_suite"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "82672dd1336cac3a.json",
+  "parameterValues" : [ ]
+}

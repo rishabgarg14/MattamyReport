@@ -1,0 +1,167 @@
+{
+  "uid" : "329288d87a0dca99",
+  "name" : "test_logoRedirect",
+  "fullName" : "test_regression_suite.HeaderTests#test_logoRedirect",
+  "historyId" : "2f36db497742f9d7ffdc727c7f375201",
+  "time" : {
+    "start" : 1596529653306,
+    "stop" : 1596529677524,
+    "duration" : 24218
+  },
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+  "statusTrace" : "self = <tests.home.header_test.HeaderTests testMethod=test_logoRedirect>\n\n    @pytest.mark.run(order=1)\n    def test_logoRedirect(self):\n>       result = self.hp.verifyLogoRedirect()\n\nhome\\header_test.py:19: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <pages.home.header_page.HeaderPage object at 0x000002783F2112E0>\n\n    def verifyLogoRedirect(self):\n        self.clickLogo()\n        attribute = self.getAttribute(locator=self._logo, locatorType=\"xpath\", attribute=\"href\")\n>       urlAlias = attribute.partition(\".com\")[2]\nE       AttributeError: 'NoneType' object has no attribute 'partition'\n\n..\\pages\\home\\header_page.py:47: AttributeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_UnitTestCase__pytest_class_setup",
+    "time" : {
+      "start" : 1596529629852,
+      "stop" : 1596529629852,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "oneTimeSetUp",
+    "time" : {
+      "start" : 1596529629852,
+      "stop" : 1596529653294,
+      "duration" : 23442
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "classSetUp",
+    "time" : {
+      "start" : 1596529653295,
+      "stop" : 1596529653295,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "browser",
+    "time" : {
+      "start" : 1596529629852,
+      "stop" : 1596529629852,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+    "statusTrace" : "self = <tests.home.header_test.HeaderTests testMethod=test_logoRedirect>\n\n    @pytest.mark.run(order=1)\n    def test_logoRedirect(self):\n>       result = self.hp.verifyLogoRedirect()\n\nhome\\header_test.py:19: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <pages.home.header_page.HeaderPage object at 0x000002783F2112E0>\n\n    def verifyLogoRedirect(self):\n        self.clickLogo()\n        attribute = self.getAttribute(locator=self._logo, locatorType=\"xpath\", attribute=\"href\")\n>       urlAlias = attribute.partition(\".com\")[2]\nE       AttributeError: 'NoneType' object has no attribute 'partition'\n\n..\\pages\\home\\header_page.py:47: AttributeError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "15e8b3d933daa49e",
+      "name" : "log",
+      "source" : "15e8b3d933daa49e.txt",
+      "type" : "text/plain",
+      "size" : 1782
+    }, {
+      "uid" : "c355b7b243f7c86d",
+      "name" : "stdout",
+      "source" : "c355b7b243f7c86d.txt",
+      "type" : "text/plain",
+      "size" : 33
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 2
+  },
+  "afterStages" : [ {
+    "name" : "_UnitTestCase__pytest_class_setup::0",
+    "time" : {
+      "start" : 1596529679778,
+      "stop" : 1596529679778,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "oneTimeSetUp::0",
+    "time" : {
+      "start" : 1596529677566,
+      "stop" : 1596529679773,
+      "duration" : 2207
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_regression_suite"
+  }, {
+    "name" : "subSuite",
+    "value" : "HeaderTests"
+  }, {
+    "name" : "host",
+    "value" : "EXIPC0154"
+  }, {
+    "name" : "thread",
+    "value" : "2548-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_regression_suite"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "329288d87a0dca99.json",
+  "parameterValues" : [ ]
+}
