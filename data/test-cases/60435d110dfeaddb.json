@@ -1,0 +1,1027 @@
+{
+  "uid" : "60435d110dfeaddb",
+  "name" : "test_logoRedirect",
+  "fullName" : "test_regression_suite.HeaderTests#test_logoRedirect",
+  "historyId" : "2f36db497742f9d7ffdc727c7f375201",
+  "time" : {
+    "start" : 1597220891102,
+    "stop" : 1597220915410,
+    "duration" : 24308
+  },
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+  "statusTrace" : "self = <tests.home.header_test.HeaderTests testMethod=test_logoRedirect>\n\n    @pytest.mark.run(order=1)\n    def test_logoRedirect(self):\n>       result = self.hp.verifyLogoRedirect()\n\nhome\\header_test.py:19: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <pages.home.header_page.HeaderPage object at 0x0000026F378763D0>\n\n    def verifyLogoRedirect(self):\n        self.clickLogo()\n        attribute = self.getAttribute(locator=self._logo, locatorType=\"xpath\", attribute=\"href\")\n>       urlAlias = attribute.partition(\".com\")[2]\nE       AttributeError: 'NoneType' object has no attribute 'partition'\n\n..\\pages\\home\\header_page.py:47: AttributeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "browser",
+    "time" : {
+      "start" : 1597220868896,
+      "stop" : 1597220868896,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "classSetUp",
+    "time" : {
+      "start" : 1597220891092,
+      "stop" : 1597220891092,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "oneTimeSetUp",
+    "time" : {
+      "start" : 1597220868896,
+      "stop" : 1597220891091,
+      "duration" : 22195
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "_UnitTestCase__pytest_class_setup",
+    "time" : {
+      "start" : 1597220868896,
+      "stop" : 1597220868896,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+    "statusTrace" : "self = <tests.home.header_test.HeaderTests testMethod=test_logoRedirect>\n\n    @pytest.mark.run(order=1)\n    def test_logoRedirect(self):\n>       result = self.hp.verifyLogoRedirect()\n\nhome\\header_test.py:19: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <pages.home.header_page.HeaderPage object at 0x0000026F378763D0>\n\n    def verifyLogoRedirect(self):\n        self.clickLogo()\n        attribute = self.getAttribute(locator=self._logo, locatorType=\"xpath\", attribute=\"href\")\n>       urlAlias = attribute.partition(\".com\")[2]\nE       AttributeError: 'NoneType' object has no attribute 'partition'\n\n..\\pages\\home\\header_page.py:47: AttributeError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "a2f64885e8050f0",
+      "name" : "log",
+      "source" : "a2f64885e8050f0.txt",
+      "type" : "text/plain",
+      "size" : 1782
+    }, {
+      "uid" : "d05dbcd0de97b922",
+      "name" : "stdout",
+      "source" : "d05dbcd0de97b922.txt",
+      "type" : "text/plain",
+      "size" : 33
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 2
+  },
+  "afterStages" : [ {
+    "name" : "oneTimeSetUp::0",
+    "time" : {
+      "start" : 1597220915427,
+      "stop" : 1597220917569,
+      "duration" : 2142
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "_UnitTestCase__pytest_class_setup::0",
+    "time" : {
+      "start" : 1597220917576,
+      "stop" : 1597220917576,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_regression_suite"
+  }, {
+    "name" : "subSuite",
+    "value" : "HeaderTests"
+  }, {
+    "name" : "host",
+    "value" : "EXIPC0154"
+  }, {
+    "name" : "thread",
+    "value" : "11464-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_regression_suite"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "4916814413c4b3fd",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1597134507923,
+        "stop" : 1597134532187,
+        "duration" : 24264
+      }
+    }, {
+      "uid" : "9654f6df1e2f3e82",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1597048057198,
+        "stop" : 1597048081481,
+        "duration" : 24283
+      }
+    }, {
+      "uid" : "6c9382a83bc9bc9e",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1596964353362,
+        "stop" : 1596964377747,
+        "duration" : 24385
+      }
+    }, {
+      "uid" : "382b8205dda8011",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1596788890401,
+        "stop" : 1596788914770,
+        "duration" : 24369
+      }
+    }, {
+      "uid" : "57eb490db370da74",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1596616107506,
+        "stop" : 1596616131751,
+        "duration" : 24245
+      }
+    }, {
+      "uid" : "1cd9ad4c5d526b85",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1596529653306,
+        "stop" : 1596529677524,
+        "duration" : 24218
+      }
+    }, {
+      "uid" : "a2260cd7b059a785",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1596443309160,
+        "stop" : 1596443333390,
+        "duration" : 24230
+      }
+    }, {
+      "uid" : "1913c8678906f5dd",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1596376134623,
+        "stop" : 1596376159085,
+        "duration" : 24462
+      }
+    }, {
+      "uid" : "ff84dbdb8747de81",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1596097696827,
+        "stop" : 1596097721100,
+        "duration" : 24273
+      }
+    }, {
+      "uid" : "bfa6d38ec9bc0479",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1595924982763,
+        "stop" : 1595925007029,
+        "duration" : 24266
+      }
+    }, {
+      "uid" : "f85291b6014b477",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1595666084812,
+        "stop" : 1595666109124,
+        "duration" : 24312
+      }
+    }, {
+      "uid" : "673ffbda7bc46cdc",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1595320112771,
+        "stop" : 1595320137009,
+        "duration" : 24238
+      }
+    }, {
+      "uid" : "b6c4223872a207f3",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1595234590473,
+        "stop" : 1595234614773,
+        "duration" : 24300
+      }
+    }, {
+      "uid" : "fe6f742640c889d",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1595216116636,
+        "stop" : 1595216141208,
+        "duration" : 24572
+      }
+    }, {
+      "uid" : "82278d0134817233",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1595061033208,
+        "stop" : 1595061057524,
+        "duration" : 24316
+      }
+    }, {
+      "uid" : "abbf5e9fe7d24436",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1594888145207,
+        "stop" : 1594888169731,
+        "duration" : 24524
+      }
+    }, {
+      "uid" : "165424d1f99df4a0",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1594715277404,
+        "stop" : 1594715301864,
+        "duration" : 24460
+      }
+    }, {
+      "uid" : "393008f3895f7378",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1594553114297,
+        "stop" : 1594553138663,
+        "duration" : 24366
+      }
+    }, {
+      "uid" : "e39ee4c6e88a91cb",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1594369713821,
+        "stop" : 1594369736556,
+        "duration" : 22735
+      }
+    }, {
+      "uid" : "68f28d1eff9fe9e9",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1594283312735,
+        "stop" : 1594283337027,
+        "duration" : 24292
+      }
+    }, {
+      "uid" : "8b748a2f53eab54e",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1594024098464,
+        "stop" : 1594024122784,
+        "duration" : 24320
+      }
+    }, {
+      "uid" : "ea1c1d74e0944d4b",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1593967442038,
+        "stop" : 1593967466606,
+        "duration" : 24568
+      }
+    }, {
+      "uid" : "f111ed25c191c687",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1593966649988,
+        "stop" : 1593966674243,
+        "duration" : 24255
+      }
+    }, {
+      "uid" : "5a34c2d5f6bd6c80",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1593678502646,
+        "stop" : 1593678526856,
+        "duration" : 24210
+      }
+    }, {
+      "uid" : "bec55a0b9cbcb89e",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1593419269914,
+        "stop" : 1593419295696,
+        "duration" : 25782
+      }
+    }, {
+      "uid" : "66085f3ae239b60a",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1593333734929,
+        "stop" : 1593333758356,
+        "duration" : 23427
+      }
+    }, {
+      "uid" : "f9f7fe497c880ee5",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1593276158648,
+        "stop" : 1593276183110,
+        "duration" : 24462
+      }
+    }, {
+      "uid" : "54dfc420599f4592",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1593184610309,
+        "stop" : 1593184634577,
+        "duration" : 24268
+      }
+    }, {
+      "uid" : "7ef1ed047229d468",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1593074647852,
+        "stop" : 1593074672176,
+        "duration" : 24324
+      }
+    }, {
+      "uid" : "d38ce5c099e12f9b",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1592814465343,
+        "stop" : 1592814489650,
+        "duration" : 24307
+      }
+    }, {
+      "uid" : "2ebce67d8e1f32dd",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1592797048180,
+        "stop" : 1592797072702,
+        "duration" : 24522
+      }
+    }, {
+      "uid" : "a8ce8389bfd413bd",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1592555302775,
+        "stop" : 1592555328935,
+        "duration" : 26160
+      }
+    }, {
+      "uid" : "35c10825e5b28004",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1592123290708,
+        "stop" : 1592123320556,
+        "duration" : 29848
+      }
+    }, {
+      "uid" : "28b3535542ac9ee3",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1592037835145,
+        "stop" : 1592045818335,
+        "duration" : 7983190
+      }
+    }, {
+      "uid" : "75342aaeb013867c",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1591950506178,
+        "stop" : 1591950530432,
+        "duration" : 24254
+      }
+    }, {
+      "uid" : "b7cd92609ce0e7f7",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1591865146494,
+        "stop" : 1591865170774,
+        "duration" : 24280
+      }
+    }, {
+      "uid" : "4170cb3f72b747f",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1591777664784,
+        "stop" : 1591777688970,
+        "duration" : 24186
+      }
+    }, {
+      "uid" : "ec55e31063f9736",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1591691267262,
+        "stop" : 1591691291540,
+        "duration" : 24278
+      }
+    }, {
+      "uid" : "23961ec93166dda6",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1591432082509,
+        "stop" : 1591432106910,
+        "duration" : 24401
+      }
+    }, {
+      "uid" : "aab391734998f461",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1591086526736,
+        "stop" : 1591086551022,
+        "duration" : 24286
+      }
+    }, {
+      "uid" : "b29fc1b8a20dd9a9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1591000042419,
+        "stop" : 1591000044105,
+        "duration" : 1686
+      }
+    }, {
+      "uid" : "25d42598899129fc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590998567486,
+        "stop" : 1590998569188,
+        "duration" : 1702
+      }
+    }, {
+      "uid" : "6463c10d1463b4f4",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 81",
+      "time" : {
+        "start" : 1590913638885,
+        "stop" : 1590913638885,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "9d3440d9a0d09fd0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590827261379,
+        "stop" : 1590827263291,
+        "duration" : 1912
+      }
+    }, {
+      "uid" : "adae797baacd745d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590740875792,
+        "stop" : 1590740877789,
+        "duration" : 1997
+      }
+    }, {
+      "uid" : "413c08377e1be86d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590654479885,
+        "stop" : 1590654482701,
+        "duration" : 2816
+      }
+    }, {
+      "uid" : "69c85acb0ee3952d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590568837332,
+        "stop" : 1590568840248,
+        "duration" : 2916
+      }
+    }, {
+      "uid" : "1b5dafadffd9fb2f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590405759149,
+        "stop" : 1590405760903,
+        "duration" : 1754
+      }
+    }, {
+      "uid" : "54228fd3012f0258",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590404462352,
+        "stop" : 1590404464674,
+        "duration" : 2322
+      }
+    }, {
+      "uid" : "40c8aeee626a5afc",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+      "time" : {
+        "start" : 1590404370756,
+        "stop" : 1590404395605,
+        "duration" : 24849
+      }
+    }, {
+      "uid" : "7d4e4c65fff55d01",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589610707410,
+        "stop" : 1589610711354,
+        "duration" : 3944
+      }
+    }, {
+      "uid" : "880f2eaf22a20c3f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589609718635,
+        "stop" : 1589609721486,
+        "duration" : 2851
+      }
+    }, {
+      "uid" : "4ba61357a95eeb2b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589609464578,
+        "stop" : 1589609467234,
+        "duration" : 2656
+      }
+    }, {
+      "uid" : "72c09ca29275d789",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589609009475,
+        "stop" : 1589609012514,
+        "duration" : 3039
+      }
+    }, {
+      "uid" : "26a6cc5b4e760f7d",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home",
+      "time" : {
+        "start" : 1589607873732,
+        "stop" : 1589607873732,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "9745ce2b4f31d8b4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589606537572,
+        "stop" : 1589606540113,
+        "duration" : 2541
+      }
+    }, {
+      "uid" : "24f44c97b931019a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589597939817,
+        "stop" : 1589597941447,
+        "duration" : 1630
+      }
+    }, {
+      "uid" : "2da6b4891eeca8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589596727338,
+        "stop" : 1589596729446,
+        "duration" : 2108
+      }
+    }, {
+      "uid" : "c75259de50f896a2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589534599288,
+        "stop" : 1589534610914,
+        "duration" : 11626
+      }
+    }, {
+      "uid" : "c8872d4e4d33905c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589469222315,
+        "stop" : 1589469223854,
+        "duration" : 1539
+      }
+    }, {
+      "uid" : "9888e5d37ad64b4f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589386822676,
+        "stop" : 1589386825580,
+        "duration" : 2904
+      }
+    }, {
+      "uid" : "82a6aa44a1abe226",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589272270691,
+        "stop" : 1589272274066,
+        "duration" : 3375
+      }
+    }, {
+      "uid" : "24334040bd74c942",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589258815529,
+        "stop" : 1589258818585,
+        "duration" : 3056
+      }
+    }, {
+      "uid" : "8f22918f2fc2933b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589258603040,
+        "stop" : 1589258605087,
+        "duration" : 2047
+      }
+    }, {
+      "uid" : "6da0f4ffc1973e77",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589255150349,
+        "stop" : 1589255152270,
+        "duration" : 1921
+      }
+    }, {
+      "uid" : "59b30220f88a2303",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589253334443,
+        "stop" : 1589253337566,
+        "duration" : 3123
+      }
+    }, {
+      "uid" : "e05b8b9fa76a1da6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589216214593,
+        "stop" : 1589216218268,
+        "duration" : 3675
+      }
+    }, {
+      "uid" : "d6b9077c4e9d4240",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589207829836,
+        "stop" : 1589207833783,
+        "duration" : 3947
+      }
+    }, {
+      "uid" : "df403817ed67e348",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589206368583,
+        "stop" : 1589206372096,
+        "duration" : 3513
+      }
+    }, {
+      "uid" : "def18ce28593d626",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589205418835,
+        "stop" : 1589205421767,
+        "duration" : 2932
+      }
+    }, {
+      "uid" : "2f7eeda2abd1461b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589203406039,
+        "stop" : 1589203409130,
+        "duration" : 3091
+      }
+    }, {
+      "uid" : "5e68b209534ce106",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589163925028,
+        "stop" : 1589163928306,
+        "duration" : 3278
+      }
+    }, {
+      "uid" : "ed8b7ad5e313b544",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589113114243,
+        "stop" : 1589113117578,
+        "duration" : 3335
+      }
+    }, {
+      "uid" : "93807561a29b0e02",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588853745453,
+        "stop" : 1588853748195,
+        "duration" : 2742
+      }
+    }, {
+      "uid" : "660a93d7ee9dd5bd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588852433726,
+        "stop" : 1588852436558,
+        "duration" : 2832
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 73,
+        "skipped" : 0,
+        "passed" : 34,
+        "unknown" : 0,
+        "total" : 107
+      },
+      "items" : [ {
+        "uid" : "64dc75798dba2e17",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/125/allure/#testresult/64dc75798dba2e17",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+        "time" : {
+          "start" : 1597134507923,
+          "stop" : 1597134532187,
+          "duration" : 24264
+        }
+      }, {
+        "uid" : "bc747c66fcf38abb",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/124/allure/#testresult/bc747c66fcf38abb",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+        "time" : {
+          "start" : 1597048057198,
+          "stop" : 1597048081481,
+          "duration" : 24283
+        }
+      }, {
+        "uid" : "bc1dd6dfb7c1358a",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/123/allure/#testresult/bc1dd6dfb7c1358a",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+        "time" : {
+          "start" : 1596964353362,
+          "stop" : 1596964377747,
+          "duration" : 24385
+        }
+      }, {
+        "uid" : "b9243304b8295363",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/122/allure/#testresult/b9243304b8295363",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+        "time" : {
+          "start" : 1596788890401,
+          "stop" : 1596788914770,
+          "duration" : 24369
+        }
+      }, {
+        "uid" : "2e4f6dbfb584fd29",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/121/allure/#testresult/2e4f6dbfb584fd29",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+        "time" : {
+          "start" : 1596788890401,
+          "stop" : 1596788914770,
+          "duration" : 24369
+        }
+      }, {
+        "uid" : "4a81448a2f1cdaae",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/120/allure/#testresult/4a81448a2f1cdaae",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+        "time" : {
+          "start" : 1596616107506,
+          "stop" : 1596616131751,
+          "duration" : 24245
+        }
+      }, {
+        "uid" : "7f41ff2bcce7b330",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/119/allure/#testresult/7f41ff2bcce7b330",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+        "time" : {
+          "start" : 1596616107506,
+          "stop" : 1596616131751,
+          "duration" : 24245
+        }
+      }, {
+        "uid" : "f563c240c577af57",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/118/allure/#testresult/f563c240c577af57",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+        "time" : {
+          "start" : 1596529653306,
+          "stop" : 1596529677524,
+          "duration" : 24218
+        }
+      }, {
+        "uid" : "ea93221cca71f195",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/117/allure/#testresult/ea93221cca71f195",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+        "time" : {
+          "start" : 1596443309160,
+          "stop" : 1596443333390,
+          "duration" : 24230
+        }
+      }, {
+        "uid" : "9e4e47cf13509851",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/116/allure/#testresult/9e4e47cf13509851",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+        "time" : {
+          "start" : 1596376134623,
+          "stop" : 1596376159085,
+          "duration" : 24462
+        }
+      }, {
+        "uid" : "355e8352e4b80f6f",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/115/allure/#testresult/355e8352e4b80f6f",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+        "time" : {
+          "start" : 1596097696827,
+          "stop" : 1596097721100,
+          "duration" : 24273
+        }
+      }, {
+        "uid" : "f6ccf06c1dcf4507",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/114/allure/#testresult/f6ccf06c1dcf4507",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+        "time" : {
+          "start" : 1596097696827,
+          "stop" : 1596097721100,
+          "duration" : 24273
+        }
+      }, {
+        "uid" : "8c3bd3b8814379f6",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/113/allure/#testresult/8c3bd3b8814379f6",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+        "time" : {
+          "start" : 1596097696827,
+          "stop" : 1596097721100,
+          "duration" : 24273
+        }
+      }, {
+        "uid" : "f96c662f5c9b9d7d",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/112/allure/#testresult/f96c662f5c9b9d7d",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+        "time" : {
+          "start" : 1595924982763,
+          "stop" : 1595925007029,
+          "duration" : 24266
+        }
+      }, {
+        "uid" : "fe5281ea571bbd8d",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/111/allure/#testresult/fe5281ea571bbd8d",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+        "time" : {
+          "start" : 1595924982763,
+          "stop" : 1595925007029,
+          "duration" : 24266
+        }
+      }, {
+        "uid" : "68f588504d396a89",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/110/allure/#testresult/68f588504d396a89",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+        "time" : {
+          "start" : 1595666084812,
+          "stop" : 1595666109124,
+          "duration" : 24312
+        }
+      }, {
+        "uid" : "2a27b89835564a90",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/109/allure/#testresult/2a27b89835564a90",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+        "time" : {
+          "start" : 1595666084812,
+          "stop" : 1595666109124,
+          "duration" : 24312
+        }
+      }, {
+        "uid" : "5751bba8db9b3d58",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/108/allure/#testresult/5751bba8db9b3d58",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+        "time" : {
+          "start" : 1595666084812,
+          "stop" : 1595666109124,
+          "duration" : 24312
+        }
+      }, {
+        "uid" : "c133b156424f3474",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/107/allure/#testresult/c133b156424f3474",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+        "time" : {
+          "start" : 1595320112771,
+          "stop" : 1595320137009,
+          "duration" : 24238
+        }
+      }, {
+        "uid" : "ce60fbc0cbffb4a8",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/106/allure/#testresult/ce60fbc0cbffb4a8",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'partition'",
+        "time" : {
+          "start" : 1595320112771,
+          "stop" : 1595320137009,
+          "duration" : 24238
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "60435d110dfeaddb.json",
+  "parameterValues" : [ ]
+}

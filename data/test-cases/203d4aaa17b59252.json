@@ -1,0 +1,1048 @@
+{
+  "uid" : "203d4aaa17b59252",
+  "name" : "test_forRealtorsLink",
+  "fullName" : "test_regression_suite.FooterTests#test_forRealtorsLink",
+  "historyId" : "4a95804f94bab01678c8fa8b37daadaf",
+  "time" : {
+    "start" : 1597221116643,
+    "stop" : 1597221140193,
+    "duration" : 23550
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError",
+  "statusTrace" : "self = <tests.home.footer_test.FooterTests testMethod=test_forRealtorsLink>\n\n    def test_forRealtorsLink(self):\n        result = self.fp.getForRealtorsLinkStatus()\n>       self.ts.markFinal(\"test_forRealtorsLink\", result, \"Footer_Verified For Realtors Link\")\n\nhome\\footer_test.py:64: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <utilities.casestatus.CaseStatus object at 0x0000026F37901730>\ntestName = 'test_forRealtorsLink', result = False\nresultMessage = 'Footer_Verified For Realtors Link'\n\n    def markFinal(self, testName, result, resultMessage):\n        \"\"\"\n        Mark the final result of verification point in a test case\n        This needs to be called at least once in a test case\n        This should be final test status of the test case\n        \"\"\"\n        self.setResult(result, resultMessage)\n    \n        if \"FAIL\" in self.resultList:\n            self.log.error(testName + \" Test Failed\")\n            self.resultList.clear()\n>           assert True == False\nE           AssertionError\n\n..\\utilities\\casestatus.py:74: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "browser",
+    "time" : {
+      "start" : 1597220917593,
+      "stop" : 1597220917593,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "oneTimeSetUp",
+    "time" : {
+      "start" : 1597220917593,
+      "stop" : 1597220939747,
+      "duration" : 22154
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "_UnitTestCase__pytest_class_setup",
+    "time" : {
+      "start" : 1597220917592,
+      "stop" : 1597220917592,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "classSetUp",
+    "time" : {
+      "start" : 1597221116642,
+      "stop" : 1597221116643,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError",
+    "statusTrace" : "self = <tests.home.footer_test.FooterTests testMethod=test_forRealtorsLink>\n\n    def test_forRealtorsLink(self):\n        result = self.fp.getForRealtorsLinkStatus()\n>       self.ts.markFinal(\"test_forRealtorsLink\", result, \"Footer_Verified For Realtors Link\")\n\nhome\\footer_test.py:64: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <utilities.casestatus.CaseStatus object at 0x0000026F37901730>\ntestName = 'test_forRealtorsLink', result = False\nresultMessage = 'Footer_Verified For Realtors Link'\n\n    def markFinal(self, testName, result, resultMessage):\n        \"\"\"\n        Mark the final result of verification point in a test case\n        This needs to be called at least once in a test case\n        This should be final test status of the test case\n        \"\"\"\n        self.setResult(result, resultMessage)\n    \n        if \"FAIL\" in self.resultList:\n            self.log.error(testName + \" Test Failed\")\n            self.resultList.clear()\n>           assert True == False\nE           AssertionError\n\n..\\utilities\\casestatus.py:74: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "5a429353bfd58787",
+      "name" : "Footer_Verified For Realtors Link.1597221140191",
+      "source" : "5a429353bfd58787.png",
+      "type" : "image/png",
+      "size" : 180442
+    }, {
+      "uid" : "71d68947b3bbdccc",
+      "name" : "log",
+      "source" : "71d68947b3bbdccc.txt",
+      "type" : "text/plain",
+      "size" : 1160
+    }, {
+      "uid" : "5724d34fb04d8ce1",
+      "name" : "stdout",
+      "source" : "5724d34fb04d8ce1.txt",
+      "type" : "text/plain",
+      "size" : 22
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 3
+  },
+  "afterStages" : [ {
+    "name" : "oneTimeSetUp::0",
+    "time" : {
+      "start" : 1597221334442,
+      "stop" : 1597221336620,
+      "duration" : 2178
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "_UnitTestCase__pytest_class_setup::0",
+    "time" : {
+      "start" : 1597221336628,
+      "stop" : 1597221336629,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_regression_suite"
+  }, {
+    "name" : "subSuite",
+    "value" : "FooterTests"
+  }, {
+    "name" : "host",
+    "value" : "EXIPC0154"
+  }, {
+    "name" : "thread",
+    "value" : "11464-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_regression_suite"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "6b50e34ffa715be5",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1597134740976,
+        "stop" : 1597134764912,
+        "duration" : 23936
+      }
+    }, {
+      "uid" : "56eb9f3e61ddeebd",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1597048290015,
+        "stop" : 1597048313870,
+        "duration" : 23855
+      }
+    }, {
+      "uid" : "c414727863491d75",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1596964600839,
+        "stop" : 1596964627774,
+        "duration" : 26935
+      }
+    }, {
+      "uid" : "2b6b6c16af3353a6",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1596789119227,
+        "stop" : 1596789142802,
+        "duration" : 23575
+      }
+    }, {
+      "uid" : "8211e8d58d2dab79",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1596616340432,
+        "stop" : 1596616364127,
+        "duration" : 23695
+      }
+    }, {
+      "uid" : "cdb65a3462c78ea9",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1596529883824,
+        "stop" : 1596529907912,
+        "duration" : 24088
+      }
+    }, {
+      "uid" : "850cdd12a54305ca",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1596443539471,
+        "stop" : 1596443563220,
+        "duration" : 23749
+      }
+    }, {
+      "uid" : "dc8a417d46ec2731",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1596376365438,
+        "stop" : 1596376389141,
+        "duration" : 23703
+      }
+    }, {
+      "uid" : "a90fc752f40418ba",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1596097934651,
+        "stop" : 1596097958434,
+        "duration" : 23783
+      }
+    }, {
+      "uid" : "1807d4d6c3675185",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1595925233416,
+        "stop" : 1595925257115,
+        "duration" : 23699
+      }
+    }, {
+      "uid" : "4008d350dc43cbe8",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1595666342463,
+        "stop" : 1595666366093,
+        "duration" : 23630
+      }
+    }, {
+      "uid" : "85962f34ac01d5b3",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1595320345131,
+        "stop" : 1595320369007,
+        "duration" : 23876
+      }
+    }, {
+      "uid" : "63eda790df330a0e",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1595234822878,
+        "stop" : 1595234846483,
+        "duration" : 23605
+      }
+    }, {
+      "uid" : "823a4ba8f0f466c",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1595216368110,
+        "stop" : 1595216391808,
+        "duration" : 23698
+      }
+    }, {
+      "uid" : "aad02a1f3a185383",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1595061266432,
+        "stop" : 1595061290071,
+        "duration" : 23639
+      }
+    }, {
+      "uid" : "65bb14a1aff6c76e",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1594888440516,
+        "stop" : 1594888464028,
+        "duration" : 23512
+      }
+    }, {
+      "uid" : "9ecc2f650b70ca3e",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1594715724067,
+        "stop" : 1594715748136,
+        "duration" : 24069
+      }
+    }, {
+      "uid" : "2bb92f2b6fb81cbc",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1594553358071,
+        "stop" : 1594553381776,
+        "duration" : 23705
+      }
+    }, {
+      "uid" : "5f83e51a8ddb29b0",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1594369945286,
+        "stop" : 1594369969004,
+        "duration" : 23718
+      }
+    }, {
+      "uid" : "f2cba0ef6bdc0ef5",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1594283543804,
+        "stop" : 1594283567625,
+        "duration" : 23821
+      }
+    }, {
+      "uid" : "d09b4a32efa35097",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1594024348076,
+        "stop" : 1594024372931,
+        "duration" : 24855
+      }
+    }, {
+      "uid" : "479b4ba6bdc5dd33",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1593967693439,
+        "stop" : 1593967717579,
+        "duration" : 24140
+      }
+    }, {
+      "uid" : "d003837951c3132d",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1593966906499,
+        "stop" : 1593966930495,
+        "duration" : 23996
+      }
+    }, {
+      "uid" : "9c236133ff387c21",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1593679133772,
+        "stop" : 1593679158117,
+        "duration" : 24345
+      }
+    }, {
+      "uid" : "adaa153dd9ecf32f",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1593420153781,
+        "stop" : 1593420179402,
+        "duration" : 25621
+      }
+    }, {
+      "uid" : "d90023f8ece99399",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1593333971522,
+        "stop" : 1593333996178,
+        "duration" : 24656
+      }
+    }, {
+      "uid" : "ee6eabc557fc6d93",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1593315114047,
+        "stop" : 1593315139126,
+        "duration" : 25079
+      }
+    }, {
+      "uid" : "7fdb70bdc0269021",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1593275668185,
+        "stop" : 1593275692799,
+        "duration" : 24614
+      }
+    }, {
+      "uid" : "31706b42a9459416",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1593074942268,
+        "stop" : 1593074967115,
+        "duration" : 24847
+      }
+    }, {
+      "uid" : "891b3ba51137db00",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1592814715279,
+        "stop" : 1592814739707,
+        "duration" : 24428
+      }
+    }, {
+      "uid" : "dc0a57f3230c47d1",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1592797302629,
+        "stop" : 1592797327466,
+        "duration" : 24837
+      }
+    }, {
+      "uid" : "6673311ad7a95b49",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1592555542682,
+        "stop" : 1592555567577,
+        "duration" : 24895
+      }
+    }, {
+      "uid" : "b792119edef3b08b",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1592123544890,
+        "stop" : 1592123569814,
+        "duration" : 24924
+      }
+    }, {
+      "uid" : "7fab7875d0ff2e17",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1592046080059,
+        "stop" : 1592046104739,
+        "duration" : 24680
+      }
+    }, {
+      "uid" : "2caef11a8506b4f8",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1591950756262,
+        "stop" : 1591950780977,
+        "duration" : 24715
+      }
+    }, {
+      "uid" : "6e62f62f892461ab",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1591865385667,
+        "stop" : 1591865410145,
+        "duration" : 24478
+      }
+    }, {
+      "uid" : "43ce641ef208ddb8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1591778313408,
+        "stop" : 1591778314324,
+        "duration" : 916
+      }
+    }, {
+      "uid" : "e4012eabe00b48b6",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1591691512400,
+        "stop" : 1591691537363,
+        "duration" : 24963
+      }
+    }, {
+      "uid" : "999606317c0dbfae",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=83.0.4103.61)",
+      "time" : {
+        "start" : 1591432240654,
+        "stop" : 1591432240659,
+        "duration" : 5
+      }
+    }, {
+      "uid" : "7de2b62b12dc899d",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1591086767891,
+        "stop" : 1591086792721,
+        "duration" : 24830
+      }
+    }, {
+      "uid" : "b4e2a1203675045a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1591000075064,
+        "stop" : 1591000076138,
+        "duration" : 1074
+      }
+    }, {
+      "uid" : "7bc0de91a894d071",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590998599206,
+        "stop" : 1590998600317,
+        "duration" : 1111
+      }
+    }, {
+      "uid" : "e6f3dd39d15fa416",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 81",
+      "time" : {
+        "start" : 1590913647908,
+        "stop" : 1590913647908,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "3e9fd5454c9175ef",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590827291981,
+        "stop" : 1590827294980,
+        "duration" : 2999
+      }
+    }, {
+      "uid" : "ce888d86d9a55a20",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590740932223,
+        "stop" : 1590740933827,
+        "duration" : 1604
+      }
+    }, {
+      "uid" : "984220c7ece8cad4",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: chrome not reachable\n  (Session info: chrome=81.0.4044.138)",
+      "time" : {
+        "start" : 1590654652204,
+        "stop" : 1590654676267,
+        "duration" : 24063
+      }
+    }, {
+      "uid" : "8299ee4fda7de280",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590568869419,
+        "stop" : 1590568870334,
+        "duration" : 915
+      }
+    }, {
+      "uid" : "f0af828909e66237",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590405783298,
+        "stop" : 1590405784489,
+        "duration" : 1191
+      }
+    }, {
+      "uid" : "3a389827e03c9112",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590404495907,
+        "stop" : 1590404497176,
+        "duration" : 1269
+      }
+    }, {
+      "uid" : "d8e97343e9fc2c09",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590404432569,
+        "stop" : 1590404433778,
+        "duration" : 1209
+      }
+    }, {
+      "uid" : "99b8c66fa848bf61",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589610662408,
+        "stop" : 1589610664074,
+        "duration" : 1666
+      }
+    }, {
+      "uid" : "a855a8ec6691d749",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589609671766,
+        "stop" : 1589609673172,
+        "duration" : 1406
+      }
+    }, {
+      "uid" : "d3997c96c7ce2c7e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589609420259,
+        "stop" : 1589609421683,
+        "duration" : 1424
+      }
+    }, {
+      "uid" : "d1a7161294d38a5a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589608959804,
+        "stop" : 1589608961377,
+        "duration" : 1573
+      }
+    }, {
+      "uid" : "d560ba32f658b2b2",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home",
+      "time" : {
+        "start" : 1589607868709,
+        "stop" : 1589607868709,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "de9a25ade1278fa0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589606495873,
+        "stop" : 1589606497157,
+        "duration" : 1284
+      }
+    }, {
+      "uid" : "fadfbe2209a2d4d8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589597896505,
+        "stop" : 1589597897617,
+        "duration" : 1112
+      }
+    }, {
+      "uid" : "888db9615da5f5c8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589596681556,
+        "stop" : 1589596682815,
+        "duration" : 1259
+      }
+    }, {
+      "uid" : "7b962f4912b35b19",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589534509700,
+        "stop" : 1589534511044,
+        "duration" : 1344
+      }
+    }, {
+      "uid" : "728bd37eb8005572",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589469144833,
+        "stop" : 1589469146500,
+        "duration" : 1667
+      }
+    }, {
+      "uid" : "adb93f9df864cfc8",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589386782587,
+        "stop" : 1589386783814,
+        "duration" : 1227
+      }
+    }, {
+      "uid" : "94adf1b5bfc39de5",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589272054918,
+        "stop" : 1589272056592,
+        "duration" : 1674
+      }
+    }, {
+      "uid" : "dba45c133f36b9a2",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589258678407,
+        "stop" : 1589258679187,
+        "duration" : 780
+      }
+    }, {
+      "uid" : "58aaf71c782898fc",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589258567047,
+        "stop" : 1589258568100,
+        "duration" : 1053
+      }
+    }, {
+      "uid" : "e382afa297cebabd",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589255120560,
+        "stop" : 1589255121475,
+        "duration" : 915
+      }
+    }, {
+      "uid" : "591ce5e9fd57dd0c",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589253205121,
+        "stop" : 1589253205930,
+        "duration" : 809
+      }
+    }, {
+      "uid" : "d43b045dfd67da7d",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589216119603,
+        "stop" : 1589216120421,
+        "duration" : 818
+      }
+    }, {
+      "uid" : "3ab724cce97fd6e5",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589207725427,
+        "stop" : 1589207726166,
+        "duration" : 739
+      }
+    }, {
+      "uid" : "ee85d82c62417e22",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589206274480,
+        "stop" : 1589206275268,
+        "duration" : 788
+      }
+    }, {
+      "uid" : "1f78fcd6a6b303f9",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589205350514,
+        "stop" : 1589205351760,
+        "duration" : 1246
+      }
+    }, {
+      "uid" : "2a7a35332b84ecea",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589203299931,
+        "stop" : 1589203300877,
+        "duration" : 946
+      }
+    }, {
+      "uid" : "cd7ed21ef2c3c69",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589163791869,
+        "stop" : 1589163792642,
+        "duration" : 773
+      }
+    }, {
+      "uid" : "c9b140d23f8ec62e",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1589113060323,
+        "stop" : 1589113061439,
+        "duration" : 1116
+      }
+    }, {
+      "uid" : "4eb01983c2359bcc",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1588853662333,
+        "stop" : 1588853663232,
+        "duration" : 899
+      }
+    }, {
+      "uid" : "4bbc6fd4d542f5cd",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1588852337480,
+        "stop" : 1588852338512,
+        "duration" : 1032
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 83,
+        "broken" : 5,
+        "skipped" : 0,
+        "passed" : 19,
+        "unknown" : 0,
+        "total" : 107
+      },
+      "items" : [ {
+        "uid" : "85564659c923359",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/125/allure/#testresult/85564659c923359",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1597134740976,
+          "stop" : 1597134764912,
+          "duration" : 23936
+        }
+      }, {
+        "uid" : "412a2ad6ddf6f172",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/124/allure/#testresult/412a2ad6ddf6f172",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1597048290015,
+          "stop" : 1597048313870,
+          "duration" : 23855
+        }
+      }, {
+        "uid" : "959619cb7e5c51d3",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/123/allure/#testresult/959619cb7e5c51d3",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1596964600839,
+          "stop" : 1596964627774,
+          "duration" : 26935
+        }
+      }, {
+        "uid" : "88c8e33391acee75",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/122/allure/#testresult/88c8e33391acee75",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1596789119227,
+          "stop" : 1596789142802,
+          "duration" : 23575
+        }
+      }, {
+        "uid" : "42c970d20c997b03",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/121/allure/#testresult/42c970d20c997b03",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1596789119227,
+          "stop" : 1596789142802,
+          "duration" : 23575
+        }
+      }, {
+        "uid" : "b82b40be73e9325",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/120/allure/#testresult/b82b40be73e9325",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1596616340432,
+          "stop" : 1596616364127,
+          "duration" : 23695
+        }
+      }, {
+        "uid" : "a8066fae0550033d",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/119/allure/#testresult/a8066fae0550033d",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1596616340432,
+          "stop" : 1596616364127,
+          "duration" : 23695
+        }
+      }, {
+        "uid" : "7f7ef52937e9df4",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/118/allure/#testresult/7f7ef52937e9df4",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1596529883824,
+          "stop" : 1596529907912,
+          "duration" : 24088
+        }
+      }, {
+        "uid" : "86ff2278a4a72452",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/117/allure/#testresult/86ff2278a4a72452",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1596443539471,
+          "stop" : 1596443563220,
+          "duration" : 23749
+        }
+      }, {
+        "uid" : "e7e9e548d8e6d53e",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/116/allure/#testresult/e7e9e548d8e6d53e",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1596376365438,
+          "stop" : 1596376389141,
+          "duration" : 23703
+        }
+      }, {
+        "uid" : "497b0a26e366a06e",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/115/allure/#testresult/497b0a26e366a06e",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1596097934651,
+          "stop" : 1596097958434,
+          "duration" : 23783
+        }
+      }, {
+        "uid" : "e4877676361f9c12",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/114/allure/#testresult/e4877676361f9c12",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1596097934651,
+          "stop" : 1596097958434,
+          "duration" : 23783
+        }
+      }, {
+        "uid" : "2eb9c9ef7e8856ab",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/113/allure/#testresult/2eb9c9ef7e8856ab",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1596097934651,
+          "stop" : 1596097958434,
+          "duration" : 23783
+        }
+      }, {
+        "uid" : "7fead2963faf05ca",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/112/allure/#testresult/7fead2963faf05ca",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1595925233416,
+          "stop" : 1595925257115,
+          "duration" : 23699
+        }
+      }, {
+        "uid" : "ed1eb9f275214cb3",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/111/allure/#testresult/ed1eb9f275214cb3",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1595925233416,
+          "stop" : 1595925257115,
+          "duration" : 23699
+        }
+      }, {
+        "uid" : "fd25715d0ca13190",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/110/allure/#testresult/fd25715d0ca13190",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1595666342463,
+          "stop" : 1595666366093,
+          "duration" : 23630
+        }
+      }, {
+        "uid" : "6ec4323994c0d0da",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/109/allure/#testresult/6ec4323994c0d0da",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1595666342463,
+          "stop" : 1595666366093,
+          "duration" : 23630
+        }
+      }, {
+        "uid" : "73e57efa0adeafb",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/108/allure/#testresult/73e57efa0adeafb",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1595666342463,
+          "stop" : 1595666366093,
+          "duration" : 23630
+        }
+      }, {
+        "uid" : "c479b219fc806cb9",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/107/allure/#testresult/c479b219fc806cb9",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1595320345131,
+          "stop" : 1595320369007,
+          "duration" : 23876
+        }
+      }, {
+        "uid" : "fdc84c253b93aa05",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/106/allure/#testresult/fdc84c253b93aa05",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1595320345131,
+          "stop" : 1595320369007,
+          "duration" : 23876
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "203d4aaa17b59252.json",
+  "parameterValues" : [ ]
+}
