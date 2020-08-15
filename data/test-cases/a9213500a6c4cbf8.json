@@ -1,0 +1,173 @@
+{
+  "uid" : "a9213500a6c4cbf8",
+  "name" : "test_termsAndConditionsLink",
+  "fullName" : "test_regression_suite.FooterTests#test_termsAndConditionsLink",
+  "historyId" : "4ea23e64cc3562a3f3e8a52950e2c5ea",
+  "time" : {
+    "start" : 1594888608115,
+    "stop" : 1594888633022,
+    "duration" : 24907
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError",
+  "statusTrace" : "self = <tests.home.footer_test.FooterTests testMethod=test_termsAndConditionsLink>\n\n    def test_termsAndConditionsLink(self):\n        result = self.fp.getTnCLinkStatus()\n>       self.ts.markFinal(\"test_termsAndConditionsLink\", result, \"Footer_Verified TnC Link\")\n\nhome\\footer_test.py:76: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <utilities.casestatus.CaseStatus object at 0x0000027F4B0F4FD0>\ntestName = 'test_termsAndConditionsLink', result = False\nresultMessage = 'Footer_Verified TnC Link'\n\n    def markFinal(self, testName, result, resultMessage):\n        \"\"\"\n        Mark the final result of verification point in a test case\n        This needs to be called at least once in a test case\n        This should be final test status of the test case\n        \"\"\"\n        self.setResult(result, resultMessage)\n    \n        if \"FAIL\" in self.resultList:\n            self.log.error(testName + \" Test Failed\")\n            self.resultList.clear()\n>           assert True == False\nE           AssertionError\n\n..\\utilities\\casestatus.py:74: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_UnitTestCase__pytest_class_setup",
+    "time" : {
+      "start" : 1594888171994,
+      "stop" : 1594888171994,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "oneTimeSetUp",
+    "time" : {
+      "start" : 1594888171995,
+      "stop" : 1594888259276,
+      "duration" : 87281
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "classSetUp",
+    "time" : {
+      "start" : 1594888608114,
+      "stop" : 1594888608114,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "browser",
+    "time" : {
+      "start" : 1594888171995,
+      "stop" : 1594888171995,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError",
+    "statusTrace" : "self = <tests.home.footer_test.FooterTests testMethod=test_termsAndConditionsLink>\n\n    def test_termsAndConditionsLink(self):\n        result = self.fp.getTnCLinkStatus()\n>       self.ts.markFinal(\"test_termsAndConditionsLink\", result, \"Footer_Verified TnC Link\")\n\nhome\\footer_test.py:76: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <utilities.casestatus.CaseStatus object at 0x0000027F4B0F4FD0>\ntestName = 'test_termsAndConditionsLink', result = False\nresultMessage = 'Footer_Verified TnC Link'\n\n    def markFinal(self, testName, result, resultMessage):\n        \"\"\"\n        Mark the final result of verification point in a test case\n        This needs to be called at least once in a test case\n        This should be final test status of the test case\n        \"\"\"\n        self.setResult(result, resultMessage)\n    \n        if \"FAIL\" in self.resultList:\n            self.log.error(testName + \" Test Failed\")\n            self.resultList.clear()\n>           assert True == False\nE           AssertionError\n\n..\\utilities\\casestatus.py:74: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "d52efe4d1f287db4",
+      "name" : "Footer_Verified TnC Link.1594888633020",
+      "source" : "d52efe4d1f287db4.png",
+      "type" : "image/png",
+      "size" : 4195
+    }, {
+      "uid" : "944b87c18c90f3ea",
+      "name" : "log",
+      "source" : "944b87c18c90f3ea.txt",
+      "type" : "text/plain",
+      "size" : 1155
+    }, {
+      "uid" : "da170358a34534d4",
+      "name" : "stdout",
+      "source" : "da170358a34534d4.txt",
+      "type" : "text/plain",
+      "size" : 22
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ {
+    "name" : "_UnitTestCase__pytest_class_setup::0",
+    "time" : {
+      "start" : 1594888660053,
+      "stop" : 1594888660053,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "oneTimeSetUp::0",
+    "time" : {
+      "start" : 1594888657897,
+      "stop" : 1594888660045,
+      "duration" : 2148
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_regression_suite"
+  }, {
+    "name" : "subSuite",
+    "value" : "FooterTests"
+  }, {
+    "name" : "host",
+    "value" : "EXIPC0154"
+  }, {
+    "name" : "thread",
+    "value" : "17360-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_regression_suite"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a9213500a6c4cbf8.json",
+  "parameterValues" : [ ]
+}

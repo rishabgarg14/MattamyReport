@@ -1,0 +1,173 @@
+{
+  "uid" : "e69d66c31d3d5463",
+  "name" : "test_copyrightText",
+  "fullName" : "test_regression_suite.FooterTests#test_copyrightText",
+  "historyId" : "875734b0bf2f540e295e154f83cab725",
+  "time" : {
+    "start" : 1596443430875,
+    "stop" : 1596443445464,
+    "duration" : 14589
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError",
+  "statusTrace" : "self = <tests.home.footer_test.FooterTests testMethod=test_copyrightText>\n\n    def test_copyrightText(self):\n        result = self.fp.getCopyrightTextStatus()\n>       self.ts.markFinal(\"test_copyrightText\", result, \"Footer_Verified Copyright text\")\n\nhome\\footer_test.py:84: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <utilities.casestatus.CaseStatus object at 0x0000018C2BA2E490>\ntestName = 'test_copyrightText', result = False\nresultMessage = 'Footer_Verified Copyright text'\n\n    def markFinal(self, testName, result, resultMessage):\n        \"\"\"\n        Mark the final result of verification point in a test case\n        This needs to be called at least once in a test case\n        This should be final test status of the test case\n        \"\"\"\n        self.setResult(result, resultMessage)\n    \n        if \"FAIL\" in self.resultList:\n            self.log.error(testName + \" Test Failed\")\n            self.resultList.clear()\n>           assert True == False\nE           AssertionError\n\n..\\utilities\\casestatus.py:74: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "browser",
+    "time" : {
+      "start" : 1596443335643,
+      "stop" : 1596443335643,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "oneTimeSetUp",
+    "time" : {
+      "start" : 1596443335644,
+      "stop" : 1596443358990,
+      "duration" : 23346
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "classSetUp",
+    "time" : {
+      "start" : 1596443430874,
+      "stop" : 1596443430874,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_UnitTestCase__pytest_class_setup",
+    "time" : {
+      "start" : 1596443335642,
+      "stop" : 1596443335642,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError",
+    "statusTrace" : "self = <tests.home.footer_test.FooterTests testMethod=test_copyrightText>\n\n    def test_copyrightText(self):\n        result = self.fp.getCopyrightTextStatus()\n>       self.ts.markFinal(\"test_copyrightText\", result, \"Footer_Verified Copyright text\")\n\nhome\\footer_test.py:84: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <utilities.casestatus.CaseStatus object at 0x0000018C2BA2E490>\ntestName = 'test_copyrightText', result = False\nresultMessage = 'Footer_Verified Copyright text'\n\n    def markFinal(self, testName, result, resultMessage):\n        \"\"\"\n        Mark the final result of verification point in a test case\n        This needs to be called at least once in a test case\n        This should be final test status of the test case\n        \"\"\"\n        self.setResult(result, resultMessage)\n    \n        if \"FAIL\" in self.resultList:\n            self.log.error(testName + \" Test Failed\")\n            self.resultList.clear()\n>           assert True == False\nE           AssertionError\n\n..\\utilities\\casestatus.py:74: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "a964321917903941",
+      "name" : "Footer_Verified Copyright text.1596443445462",
+      "source" : "a964321917903941.png",
+      "type" : "image/png",
+      "size" : 178628
+    }, {
+      "uid" : "76cd270577741406",
+      "name" : "log",
+      "source" : "76cd270577741406.txt",
+      "type" : "text/plain",
+      "size" : 925
+    }, {
+      "uid" : "618126a541713326",
+      "name" : "stdout",
+      "source" : "618126a541713326.txt",
+      "type" : "text/plain",
+      "size" : 11
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ {
+    "name" : "oneTimeSetUp::0",
+    "time" : {
+      "start" : 1596443758784,
+      "stop" : 1596443761020,
+      "duration" : 2236
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_UnitTestCase__pytest_class_setup::0",
+    "time" : {
+      "start" : 1596443761031,
+      "stop" : 1596443761031,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_regression_suite"
+  }, {
+    "name" : "subSuite",
+    "value" : "FooterTests"
+  }, {
+    "name" : "host",
+    "value" : "EXIPC0154"
+  }, {
+    "name" : "thread",
+    "value" : "11528-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_regression_suite"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e69d66c31d3d5463.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,173 @@
+{
+  "uid" : "95efc452519608af",
+  "name" : "test_makeItRealRedirect",
+  "fullName" : "test_regression_suite.HeaderTests#test_makeItRealRedirect",
+  "historyId" : "2ff4ec9fe8ee0c09182612afe77177d9",
+  "time" : {
+    "start" : 1595215931148,
+    "stop" : 1595215944199,
+    "duration" : 13051
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError",
+  "statusTrace" : "self = <tests.home.header_test.HeaderTests testMethod=test_makeItRealRedirect>\n\n    def test_makeItRealRedirect(self):\n        result = self.hp.verifyMakeItRealRedirect()\n>       self.ts.markFinal(\"test_makeItRealRedirect\", result,\n                          \"'Make It real' redirection test case executed\")\n\nhome\\header_test.py:39: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <utilities.casestatus.CaseStatus object at 0x000002085BB14D00>\ntestName = 'test_makeItRealRedirect', result = False\nresultMessage = \"'Make It real' redirection test case executed\"\n\n    def markFinal(self, testName, result, resultMessage):\n        \"\"\"\n        Mark the final result of verification point in a test case\n        This needs to be called at least once in a test case\n        This should be final test status of the test case\n        \"\"\"\n        self.setResult(result, resultMessage)\n    \n        if \"FAIL\" in self.resultList:\n            self.log.error(testName + \" Test Failed\")\n            self.resultList.clear()\n>           assert True == False\nE           AssertionError\n\n..\\utilities\\casestatus.py:74: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_UnitTestCase__pytest_class_setup",
+    "time" : {
+      "start" : 1595061487090,
+      "stop" : 1595061487090,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "classSetUp",
+    "time" : {
+      "start" : 1595215931146,
+      "stop" : 1595215931146,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "browser",
+    "time" : {
+      "start" : 1595061487091,
+      "stop" : 1595061487091,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "oneTimeSetUp",
+    "time" : {
+      "start" : 1595061487092,
+      "stop" : 1595061513784,
+      "duration" : 26692
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError",
+    "statusTrace" : "self = <tests.home.header_test.HeaderTests testMethod=test_makeItRealRedirect>\n\n    def test_makeItRealRedirect(self):\n        result = self.hp.verifyMakeItRealRedirect()\n>       self.ts.markFinal(\"test_makeItRealRedirect\", result,\n                          \"'Make It real' redirection test case executed\")\n\nhome\\header_test.py:39: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <utilities.casestatus.CaseStatus object at 0x000002085BB14D00>\ntestName = 'test_makeItRealRedirect', result = False\nresultMessage = \"'Make It real' redirection test case executed\"\n\n    def markFinal(self, testName, result, resultMessage):\n        \"\"\"\n        Mark the final result of verification point in a test case\n        This needs to be called at least once in a test case\n        This should be final test status of the test case\n        \"\"\"\n        self.setResult(result, resultMessage)\n    \n        if \"FAIL\" in self.resultList:\n            self.log.error(testName + \" Test Failed\")\n            self.resultList.clear()\n>           assert True == False\nE           AssertionError\n\n..\\utilities\\casestatus.py:74: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "262b73ff1d8e2f80",
+      "name" : "'Make It real' redirection test case executed.1595215944197",
+      "source" : "262b73ff1d8e2f80.png",
+      "type" : "image/png",
+      "size" : 4195
+    }, {
+      "uid" : "87a8b2beb721f978",
+      "name" : "log",
+      "source" : "87a8b2beb721f978.txt",
+      "type" : "text/plain",
+      "size" : 1215
+    }, {
+      "uid" : "6ff60d29161f1e84",
+      "name" : "stdout",
+      "source" : "6ff60d29161f1e84.txt",
+      "type" : "text/plain",
+      "size" : 11
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ {
+    "name" : "_UnitTestCase__pytest_class_setup::0",
+    "time" : {
+      "start" : 1595215947214,
+      "stop" : 1595215947214,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "oneTimeSetUp::0",
+    "time" : {
+      "start" : 1595215944218,
+      "stop" : 1595215947209,
+      "duration" : 2991
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_regression_suite"
+  }, {
+    "name" : "subSuite",
+    "value" : "HeaderTests"
+  }, {
+    "name" : "host",
+    "value" : "EXIPC0154"
+  }, {
+    "name" : "thread",
+    "value" : "18536-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_regression_suite"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "95efc452519608af.json",
+  "parameterValues" : [ ]
+}
