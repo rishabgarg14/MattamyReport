@@ -1,0 +1,1065 @@
+{
+  "uid" : "15ce68208701f2f5",
+  "name" : "test_countryToggleClick",
+  "fullName" : "test_regression_suite.HeaderTests#test_countryToggleClick",
+  "historyId" : "6c053e0624337537ed7927f4232d7df8",
+  "time" : {
+    "start" : 1597653345380,
+    "stop" : 1597653376601,
+    "duration" : 31221
+  },
+  "status" : "broken",
+  "statusMessage" : "TypeError: argument of type 'NoneType' is not iterable",
+  "statusTrace" : "self = <tests.home.header_test.HeaderTests testMethod=test_countryToggleClick>\n\n    def test_countryToggleClick(self):\n>       result = self.hp.verifyToggleClick()\n\nhome\\header_test.py:48: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <pages.home.header_page.HeaderPage object at 0x0000016553E5ED90>\n\n    def verifyToggleClick(self):\n        oldAttribute = self.getAttribute(self._usa_text, \"xpath\", \"class\")\n        newValue = \"\"\n        self.clickCountrySelector()\n        newAttribute = self.getAttribute(self._usa_text, \"xpath\", \"class\")\n    \n>       if \"text-action-blue\" in oldAttribute:\nE       TypeError: argument of type 'NoneType' is not iterable\n\n..\\pages\\home\\header_page.py:79: TypeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_UnitTestCase__pytest_class_setup",
+    "time" : {
+      "start" : 1597653306691,
+      "stop" : 1597653306692,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "oneTimeSetUp",
+    "time" : {
+      "start" : 1597653306692,
+      "stop" : 1597653332138,
+      "duration" : 25446
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "browser",
+    "time" : {
+      "start" : 1597653306692,
+      "stop" : 1597653306692,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "classSetUp",
+    "time" : {
+      "start" : 1597653345380,
+      "stop" : 1597653345380,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "TypeError: argument of type 'NoneType' is not iterable",
+    "statusTrace" : "self = <tests.home.header_test.HeaderTests testMethod=test_countryToggleClick>\n\n    def test_countryToggleClick(self):\n>       result = self.hp.verifyToggleClick()\n\nhome\\header_test.py:48: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <pages.home.header_page.HeaderPage object at 0x0000016553E5ED90>\n\n    def verifyToggleClick(self):\n        oldAttribute = self.getAttribute(self._usa_text, \"xpath\", \"class\")\n        newValue = \"\"\n        self.clickCountrySelector()\n        newAttribute = self.getAttribute(self._usa_text, \"xpath\", \"class\")\n    \n>       if \"text-action-blue\" in oldAttribute:\nE       TypeError: argument of type 'NoneType' is not iterable\n\n..\\pages\\home\\header_page.py:79: TypeError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "2e995f64378ecf0d",
+      "name" : "log",
+      "source" : "2e995f64378ecf0d.txt",
+      "type" : "text/plain",
+      "size" : 1303
+    }, {
+      "uid" : "3869ae76b581174f",
+      "name" : "stdout",
+      "source" : "3869ae76b581174f.txt",
+      "type" : "text/plain",
+      "size" : 33
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 0,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "_UnitTestCase__pytest_class_setup::0",
+    "time" : {
+      "start" : 1597653379189,
+      "stop" : 1597653379189,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "oneTimeSetUp::0",
+    "time" : {
+      "start" : 1597653376984,
+      "stop" : 1597653379186,
+      "duration" : 2202
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_regression_suite"
+  }, {
+    "name" : "subSuite",
+    "value" : "HeaderTests"
+  }, {
+    "name" : "host",
+    "value" : "EXIPC0154"
+  }, {
+    "name" : "thread",
+    "value" : "7952-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_regression_suite"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "aba468739d5e4afd",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1597598353091,
+        "stop" : 1597598384922,
+        "duration" : 31831
+      }
+    }, {
+      "uid" : "204212382c1da384",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1597516764075,
+        "stop" : 1597516795320,
+        "duration" : 31245
+      }
+    }, {
+      "uid" : "9e0ba6783075ed7d",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1597394171662,
+        "stop" : 1597394203458,
+        "duration" : 31796
+      }
+    }, {
+      "uid" : "b68db658c392f326",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1597221371584,
+        "stop" : 1597221402791,
+        "duration" : 31207
+      }
+    }, {
+      "uid" : "ed1b144a6201cb07",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1597135004679,
+        "stop" : 1597135036220,
+        "duration" : 31541
+      }
+    }, {
+      "uid" : "2458bb7e392513c4",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1597048550696,
+        "stop" : 1597048582326,
+        "duration" : 31630
+      }
+    }, {
+      "uid" : "569e6660f5d97041",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1596970553799,
+        "stop" : 1596970585053,
+        "duration" : 31254
+      }
+    }, {
+      "uid" : "ffd935eb92750681",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1596789377098,
+        "stop" : 1596789408742,
+        "duration" : 31644
+      }
+    }, {
+      "uid" : "81898da67635705f",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1596616599992,
+        "stop" : 1596616631521,
+        "duration" : 31529
+      }
+    }, {
+      "uid" : "2f22a253f2c8643e",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1596530149931,
+        "stop" : 1596530181220,
+        "duration" : 31289
+      }
+    }, {
+      "uid" : "33579e5fa6b4a306",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1596443797794,
+        "stop" : 1596443829396,
+        "duration" : 31602
+      }
+    }, {
+      "uid" : "79072bce1a079779",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1596376626120,
+        "stop" : 1596376657604,
+        "duration" : 31484
+      }
+    }, {
+      "uid" : "1f1e82002dcef403",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1596098198377,
+        "stop" : 1596098229907,
+        "duration" : 31530
+      }
+    }, {
+      "uid" : "6c24310416359089",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1595925520856,
+        "stop" : 1595925552069,
+        "duration" : 31213
+      }
+    }, {
+      "uid" : "80f54b96a6efd7d7",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1595666632760,
+        "stop" : 1595666664166,
+        "duration" : 31406
+      }
+    }, {
+      "uid" : "ebed72ff0c57bbbf",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1595320608034,
+        "stop" : 1595320639610,
+        "duration" : 31576
+      }
+    }, {
+      "uid" : "c2287eab4c4301e8",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1595235082884,
+        "stop" : 1595235114514,
+        "duration" : 31630
+      }
+    }, {
+      "uid" : "f5fe830cdce929",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1595216624976,
+        "stop" : 1595216656625,
+        "duration" : 31649
+      }
+    }, {
+      "uid" : "a284721af35e1af9",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1595061519711,
+        "stop" : 1595215911043,
+        "duration" : 154391332
+      }
+    }, {
+      "uid" : "a2582e4c24531925",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1594889042765,
+        "stop" : 1594889080153,
+        "duration" : 37388
+      }
+    }, {
+      "uid" : "b743bc0fb74582cf",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1594716023525,
+        "stop" : 1594716055221,
+        "duration" : 31696
+      }
+    }, {
+      "uid" : "8e3de9314cd20942",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1594553686098,
+        "stop" : 1594553717731,
+        "duration" : 31633
+      }
+    }, {
+      "uid" : "d60791bf2d7d6426",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1594370315218,
+        "stop" : 1594370346823,
+        "duration" : 31605
+      }
+    }, {
+      "uid" : "79f9efd578959d39",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1594283803418,
+        "stop" : 1594283835053,
+        "duration" : 31635
+      }
+    }, {
+      "uid" : "4b66adc03fa24661",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1594024622290,
+        "stop" : 1594024654316,
+        "duration" : 32026
+      }
+    }, {
+      "uid" : "580942a46825c1c5",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1593967992445,
+        "stop" : 1593968028802,
+        "duration" : 36357
+      }
+    }, {
+      "uid" : "1ce68a9256220adb",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1593967175193,
+        "stop" : 1593967206538,
+        "duration" : 31345
+      }
+    }, {
+      "uid" : "3add246eb4b3102e",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1593679451263,
+        "stop" : 1593679482589,
+        "duration" : 31326
+      }
+    }, {
+      "uid" : "594c8d2f3b0e7d00",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1593420445631,
+        "stop" : 1593420477412,
+        "duration" : 31781
+      }
+    }, {
+      "uid" : "cedba03ce3d34333",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1593334232811,
+        "stop" : 1593334264510,
+        "duration" : 31699
+      }
+    }, {
+      "uid" : "f484aa8408000598",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1593315382516,
+        "stop" : 1593315413906,
+        "duration" : 31390
+      }
+    }, {
+      "uid" : "fbc8ab5609b1f87b",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1593275936422,
+        "stop" : 1593275967441,
+        "duration" : 31019
+      }
+    }, {
+      "uid" : "ce3af92ad41e153b",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1593075211448,
+        "stop" : 1593075243305,
+        "duration" : 31857
+      }
+    }, {
+      "uid" : "644c3868784aaf0f",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1592815012224,
+        "stop" : 1592815048503,
+        "duration" : 36279
+      }
+    }, {
+      "uid" : "1f27bbf15610d9f4",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1592797574329,
+        "stop" : 1592797606108,
+        "duration" : 31779
+      }
+    }, {
+      "uid" : "5bab89c4bd2cb6b",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1592555891409,
+        "stop" : 1592555927809,
+        "duration" : 36400
+      }
+    }, {
+      "uid" : "1c82a8ff31a5b9fb",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1592123906783,
+        "stop" : 1592123938078,
+        "duration" : 31295
+      }
+    }, {
+      "uid" : "f31b150892ac2618",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1592046348516,
+        "stop" : 1592046380325,
+        "duration" : 31809
+      }
+    }, {
+      "uid" : "6313021866ee98b0",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1591951023717,
+        "stop" : 1591951055311,
+        "duration" : 31594
+      }
+    }, {
+      "uid" : "2df1a4365efb38c6",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1591865651300,
+        "stop" : 1591865682561,
+        "duration" : 31261
+      }
+    }, {
+      "uid" : "98ec4aa16b593016",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1591778564376,
+        "stop" : 1591778595719,
+        "duration" : 31343
+      }
+    }, {
+      "uid" : "ae0a2d451b9ec270",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1591691763178,
+        "stop" : 1591691763193,
+        "duration" : 15
+      }
+    }, {
+      "uid" : "361d9e72a93e65b9",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1591432285439,
+        "stop" : 1591432334623,
+        "duration" : 49184
+      }
+    }, {
+      "uid" : "a7e483d36a915188",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1591087031304,
+        "stop" : 1591087062522,
+        "duration" : 31218
+      }
+    }, {
+      "uid" : "632fe3eb81f5c8a2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1591000115788,
+        "stop" : 1591000116241,
+        "duration" : 453
+      }
+    }, {
+      "uid" : "106c3a181de44843",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590998635356,
+        "stop" : 1590998635720,
+        "duration" : 364
+      }
+    }, {
+      "uid" : "82a5ebb5092c42a5",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 81",
+      "time" : {
+        "start" : 1590913653654,
+        "stop" : 1590913653654,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "7401e40f587cbe54",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590827340966,
+        "stop" : 1590827341290,
+        "duration" : 324
+      }
+    }, {
+      "uid" : "afcf074609545660",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590740989231,
+        "stop" : 1590740989861,
+        "duration" : 630
+      }
+    }, {
+      "uid" : "d1dec2d9c0d4172",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1590654886993,
+        "stop" : 1590654887004,
+        "duration" : 11
+      }
+    }, {
+      "uid" : "7efd156d7b7e7885",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590568908164,
+        "stop" : 1590568908784,
+        "duration" : 620
+      }
+    }, {
+      "uid" : "f24446cedaf57d2c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590405823717,
+        "stop" : 1590405824133,
+        "duration" : 416
+      }
+    }, {
+      "uid" : "be7a6afa18764100",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590404542072,
+        "stop" : 1590404544521,
+        "duration" : 2449
+      }
+    }, {
+      "uid" : "95b1fb2f705a40e0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590404541504,
+        "stop" : 1590404544145,
+        "duration" : 2641
+      }
+    }, {
+      "uid" : "170fb3fd2615e199",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589610705970,
+        "stop" : 1589610706600,
+        "duration" : 630
+      }
+    }, {
+      "uid" : "a7aad9f525681a7c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589609717482,
+        "stop" : 1589609718061,
+        "duration" : 579
+      }
+    }, {
+      "uid" : "e3838fd2d3a25d41",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589609463372,
+        "stop" : 1589609463982,
+        "duration" : 610
+      }
+    }, {
+      "uid" : "a285e62aa1e2e848",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589609007147,
+        "stop" : 1589609008099,
+        "duration" : 952
+      }
+    }, {
+      "uid" : "3054a46da216f9df",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home",
+      "time" : {
+        "start" : 1589607872680,
+        "stop" : 1589607872680,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "d8d817f894a9ba6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589606536337,
+        "stop" : 1589606536944,
+        "duration" : 607
+      }
+    }, {
+      "uid" : "d456e12e423a9642",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589597937766,
+        "stop" : 1589597938542,
+        "duration" : 776
+      }
+    }, {
+      "uid" : "1556282c85b5d7af",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589596725721,
+        "stop" : 1589596726384,
+        "duration" : 663
+      }
+    }, {
+      "uid" : "3586a4ca39ee64ef",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589534598027,
+        "stop" : 1589534598646,
+        "duration" : 619
+      }
+    }, {
+      "uid" : "184636ee0eed10af",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589469220992,
+        "stop" : 1589469221595,
+        "duration" : 603
+      }
+    }, {
+      "uid" : "bea5347728c65e6c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589386821838,
+        "stop" : 1589386822254,
+        "duration" : 416
+      }
+    }, {
+      "uid" : "3249831f5c37edb9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589272269864,
+        "stop" : 1589272270255,
+        "duration" : 391
+      }
+    }, {
+      "uid" : "580e0fcf2a7353b6",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1589258759659,
+        "stop" : 1589258791340,
+        "duration" : 31681
+      }
+    }, {
+      "uid" : "9ab6de179aadc91f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589258602115,
+        "stop" : 1589258602534,
+        "duration" : 419
+      }
+    }, {
+      "uid" : "6f8e0587b36ce813",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589255149513,
+        "stop" : 1589255149845,
+        "duration" : 332
+      }
+    }, {
+      "uid" : "1d85621172f5fc00",
+      "status" : "broken",
+      "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+      "time" : {
+        "start" : 1589253278998,
+        "stop" : 1589253310594,
+        "duration" : 31596
+      }
+    }, {
+      "uid" : "103d37c03bd41735",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589216213743,
+        "stop" : 1589216214228,
+        "duration" : 485
+      }
+    }, {
+      "uid" : "531b22c75b1ce5ea",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589207829079,
+        "stop" : 1589207829463,
+        "duration" : 384
+      }
+    }, {
+      "uid" : "da82221114bd8f77",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589206367858,
+        "stop" : 1589206368221,
+        "duration" : 363
+      }
+    }, {
+      "uid" : "2e4844569f7f8ece",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589205418139,
+        "stop" : 1589205418480,
+        "duration" : 341
+      }
+    }, {
+      "uid" : "283b6b20261fd1d6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589203405358,
+        "stop" : 1589203405670,
+        "duration" : 312
+      }
+    }, {
+      "uid" : "afc5aa34ac1304f6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589163924297,
+        "stop" : 1589163924679,
+        "duration" : 382
+      }
+    }, {
+      "uid" : "16a3fe3897b37731",
+      "status" : "passed",
+      "time" : {
+        "start" : 1589113113433,
+        "stop" : 1589113113816,
+        "duration" : 383
+      }
+    }, {
+      "uid" : "be16b745f1385927",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588853744681,
+        "stop" : 1588853745030,
+        "duration" : 349
+      }
+    }, {
+      "uid" : "c712a0b2633133c8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588852432917,
+        "stop" : 1588852433346,
+        "duration" : 429
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 80,
+        "skipped" : 0,
+        "passed" : 32,
+        "unknown" : 0,
+        "total" : 112
+      },
+      "items" : [ {
+        "uid" : "1e6991159560c80",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/130/allure/#testresult/1e6991159560c80",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1597598353091,
+          "stop" : 1597598384922,
+          "duration" : 31831
+        }
+      }, {
+        "uid" : "e5f6c7ecfc1bd7b1",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/129/allure/#testresult/e5f6c7ecfc1bd7b1",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1597516764075,
+          "stop" : 1597516795320,
+          "duration" : 31245
+        }
+      }, {
+        "uid" : "37cbeef1f9a67aba",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/128/allure/#testresult/37cbeef1f9a67aba",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1597394171662,
+          "stop" : 1597394203458,
+          "duration" : 31796
+        }
+      }, {
+        "uid" : "304ac223a103f441",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/127/allure/#testresult/304ac223a103f441",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1597221371584,
+          "stop" : 1597221402791,
+          "duration" : 31207
+        }
+      }, {
+        "uid" : "85a28e49f025182e",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/126/allure/#testresult/85a28e49f025182e",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1597221371584,
+          "stop" : 1597221402791,
+          "duration" : 31207
+        }
+      }, {
+        "uid" : "90807d823b5a0c3c",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/125/allure/#testresult/90807d823b5a0c3c",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1597135004679,
+          "stop" : 1597135036220,
+          "duration" : 31541
+        }
+      }, {
+        "uid" : "a462ff2fc0c2f9e4",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/124/allure/#testresult/a462ff2fc0c2f9e4",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1597048550696,
+          "stop" : 1597048582326,
+          "duration" : 31630
+        }
+      }, {
+        "uid" : "b08997ef33d75603",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/123/allure/#testresult/b08997ef33d75603",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1596970553799,
+          "stop" : 1596970585053,
+          "duration" : 31254
+        }
+      }, {
+        "uid" : "821ade2508d4ee59",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/122/allure/#testresult/821ade2508d4ee59",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1596789377098,
+          "stop" : 1596789408742,
+          "duration" : 31644
+        }
+      }, {
+        "uid" : "15ebb6502636aba6",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/121/allure/#testresult/15ebb6502636aba6",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1596789377098,
+          "stop" : 1596789408742,
+          "duration" : 31644
+        }
+      }, {
+        "uid" : "115b2e299484ef53",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/120/allure/#testresult/115b2e299484ef53",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1596616599992,
+          "stop" : 1596616631521,
+          "duration" : 31529
+        }
+      }, {
+        "uid" : "cf54d99a262f75bc",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/119/allure/#testresult/cf54d99a262f75bc",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1596616599992,
+          "stop" : 1596616631521,
+          "duration" : 31529
+        }
+      }, {
+        "uid" : "1a3b071e9ea21fd8",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/118/allure/#testresult/1a3b071e9ea21fd8",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1596530149931,
+          "stop" : 1596530181220,
+          "duration" : 31289
+        }
+      }, {
+        "uid" : "363267ddef5a7ae5",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/117/allure/#testresult/363267ddef5a7ae5",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1596443797794,
+          "stop" : 1596443829396,
+          "duration" : 31602
+        }
+      }, {
+        "uid" : "afde47fab3c781a2",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/116/allure/#testresult/afde47fab3c781a2",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1596376626120,
+          "stop" : 1596376657604,
+          "duration" : 31484
+        }
+      }, {
+        "uid" : "57a6aa32cdf2f82e",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/115/allure/#testresult/57a6aa32cdf2f82e",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1596098198377,
+          "stop" : 1596098229907,
+          "duration" : 31530
+        }
+      }, {
+        "uid" : "7b8d53a9bc1cd320",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/114/allure/#testresult/7b8d53a9bc1cd320",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1596098198377,
+          "stop" : 1596098229907,
+          "duration" : 31530
+        }
+      }, {
+        "uid" : "98df9b0f4813da78",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/113/allure/#testresult/98df9b0f4813da78",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1596098198377,
+          "stop" : 1596098229907,
+          "duration" : 31530
+        }
+      }, {
+        "uid" : "1d425e29fbcbf474",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/112/allure/#testresult/1d425e29fbcbf474",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1595925520856,
+          "stop" : 1595925552069,
+          "duration" : 31213
+        }
+      }, {
+        "uid" : "a31e7366cb5c5218",
+        "reportUrl" : "http://localhost:9090/jenkins/job/MattamyAutomationFramework/111/allure/#testresult/a31e7366cb5c5218",
+        "status" : "broken",
+        "statusDetails" : "TypeError: argument of type 'NoneType' is not iterable",
+        "time" : {
+          "start" : 1595925520856,
+          "stop" : 1595925552069,
+          "duration" : 31213
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "15ce68208701f2f5.json",
+  "parameterValues" : [ ]
+}
